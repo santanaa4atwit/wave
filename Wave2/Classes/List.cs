@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Wave2.DataStructure;
 using System.IO;
+using System.Data.SQLite;
 
 namespace Wave2.Classes
 {
@@ -101,6 +102,23 @@ namespace Wave2.Classes
             foreach (string file in addresses)
             {
                 CurrentPlaylist.Add(file);
+
+                TagLib.File tagFile = TagLib.File.Create(file);
+                string title = tagFile.Tag.Title;
+
+                using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
+                {
+                    using (SQLiteCommand cmd = new SQLiteCommand())
+                    {
+                        string strSql = $"INSERT INTO[Track] (TrackId, TrackTitle) VALUES(3, '{title}')";
+                        cmd.CommandText = strSql;
+                        cmd.Connection = conn;
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+
             }
         }
 
