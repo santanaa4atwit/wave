@@ -102,6 +102,9 @@
             this.Playlist_datagrid.AllowUserToDeleteRows = false;
             this.Playlist_datagrid.AllowUserToResizeColumns = false;
             this.Playlist_datagrid.AllowUserToResizeRows = false;
+            this.Playlist_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Playlist_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -152,7 +155,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Playlist_datagrid);
             this.Controls.Add(this.TitleBar_panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
             this.TitleBar_panel.ResumeLayout(false);

@@ -108,6 +108,9 @@
             // 
             // Menu_panel
             // 
+            this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
             this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Menu_panel.Controls.Add(this.SavePlaylist_btn);
@@ -164,10 +167,10 @@
             this.NewPlaylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPlaylist_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPlaylist_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.NewPlaylist_btn.Location = new System.Drawing.Point(20, -2);
+            this.NewPlaylist_btn.Location = new System.Drawing.Point(19, -2);
             this.NewPlaylist_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewPlaylist_btn.Name = "NewPlaylist_btn";
-            this.NewPlaylist_btn.Size = new System.Drawing.Size(238, 69);
+            this.NewPlaylist_btn.Size = new System.Drawing.Size(239, 69);
             this.NewPlaylist_btn.TabIndex = 7;
             this.NewPlaylist_btn.Text = "New Playlist";
             this.NewPlaylist_btn.UseVisualStyleBackColor = false;
@@ -175,6 +178,9 @@
             // 
             // AddFiles_btn
             // 
+            this.AddFiles_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AddFiles_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.AddFiles_btn.FlatAppearance.BorderSize = 0;
             this.AddFiles_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -193,6 +199,9 @@
             // 
             // AddFolder_btn
             // 
+            this.AddFolder_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AddFolder_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.AddFolder_btn.FlatAppearance.BorderSize = 0;
             this.AddFolder_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -211,6 +220,9 @@
             // 
             // Play_lebel
             // 
+            this.Play_lebel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Play_lebel.AutoSize = true;
             this.Play_lebel.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Play_lebel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
@@ -239,6 +251,9 @@
             this.Playlist_datagrid.AllowUserToDeleteRows = false;
             this.Playlist_datagrid.AllowUserToResizeColumns = false;
             this.Playlist_datagrid.AllowUserToResizeRows = false;
+            this.Playlist_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Playlist_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -313,7 +328,6 @@
             this.Controls.Add(this.AddFiles_btn);
             this.Controls.Add(this.Menu_panel);
             this.Controls.Add(this.TitleBar_panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PlaylistForm";
             this.Text = "PlaylistForm";
             this.TitleBar_panel.ResumeLayout(false);

@@ -356,6 +356,9 @@ namespace Wave2.Forms
          }*/
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+            else Playlist_FlowPanel.Visible = false;
+
             foCUS.Focus();
             PlaylistForm pf = new PlaylistForm();
 

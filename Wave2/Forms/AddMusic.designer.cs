@@ -101,12 +101,13 @@
             this.label1.Location = new System.Drawing.Point(0, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(765, 404);
+            this.label1.Size = new System.Drawing.Size(697, 404);
             this.label1.TabIndex = 5;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AddFiles_btn
             // 
+            this.AddFiles_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddFiles_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.AddFiles_btn.FlatAppearance.BorderSize = 0;
             this.AddFiles_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -125,6 +126,7 @@
             // 
             // AddFolder_btn
             // 
+            this.AddFolder_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddFolder_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.AddFolder_btn.FlatAppearance.BorderSize = 0;
             this.AddFolder_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -142,6 +144,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Gray;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -159,6 +162,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.Gray;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -186,7 +190,6 @@
             this.Controls.Add(this.AddFiles_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TitleBar_panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddMusic";
             this.Text = "AboutForm";
             this.TitleBar_panel.ResumeLayout(false);

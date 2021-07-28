@@ -214,7 +214,6 @@
             // 
             // BelowPanel
             // 
-            this.BelowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BelowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BelowPanel.Controls.Add(this.Volume_trackBar);
             this.BelowPanel.Controls.Add(this.Volume_btn);
@@ -482,7 +481,6 @@
             this.menu.Controls.Add(this.radioButton3);
             this.menu.Controls.Add(this.radioButton1);
             this.menu.Controls.Add(this.panel1);
-            this.menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(257, 650);
@@ -616,7 +614,6 @@
             this.TitleBar_panel.Controls.Add(this.Min_Button);
             this.TitleBar_panel.Controls.Add(this.Max_Button);
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
-            this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar_panel.Location = new System.Drawing.Point(257, 0);
             this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TitleBar_panel.Name = "TitleBar_panel";
