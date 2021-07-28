@@ -40,8 +40,6 @@
             this.NewPlaylist_btn = new System.Windows.Forms.Button();
             this.AddFiles_btn = new System.Windows.Forms.Button();
             this.AddFolder_btn = new System.Windows.Forms.Button();
-            this.Repeat_check = new System.Windows.Forms.CheckBox();
-            this.Shuffle_check = new System.Windows.Forms.CheckBox();
             this.Play_lebel = new System.Windows.Forms.Button();
             this.Playlist_datagrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +65,7 @@
             this.TitleBar_panel.Name = "TitleBar_panel";
             this.TitleBar_panel.Size = new System.Drawing.Size(1052, 51);
             this.TitleBar_panel.TabIndex = 3;
+            this.TitleBar_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
             // foCUS
             // 
@@ -80,14 +79,15 @@
             // 
             this.EliteMediaPlayer_label.AutoSize = true;
             this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
-            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
             this.EliteMediaPlayer_label.Location = new System.Drawing.Point(9, 6);
             this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
-            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(181, 36);
+            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(222, 34);
             this.EliteMediaPlayer_label.TabIndex = 6;
             this.EliteMediaPlayer_label.Text = "Playlist Menu";
+            this.EliteMediaPlayer_label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
             // Cross_Button
             // 
@@ -126,7 +126,7 @@
             this.SavePlaylist_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SavePlaylist_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.SavePlaylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SavePlaylist_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavePlaylist_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SavePlaylist_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SavePlaylist_btn.Location = new System.Drawing.Point(519, -2);
             this.SavePlaylist_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -144,7 +144,7 @@
             this.LoadPlaylist_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LoadPlaylist_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.LoadPlaylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadPlaylist_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadPlaylist_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadPlaylist_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.LoadPlaylist_btn.Location = new System.Drawing.Point(258, -2);
             this.LoadPlaylist_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -162,7 +162,7 @@
             this.NewPlaylist_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.NewPlaylist_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.NewPlaylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewPlaylist_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewPlaylist_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPlaylist_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.NewPlaylist_btn.Location = new System.Drawing.Point(20, -2);
             this.NewPlaylist_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -180,7 +180,7 @@
             this.AddFiles_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddFiles_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.AddFiles_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddFiles_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddFiles_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddFiles_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AddFiles_btn.Location = new System.Drawing.Point(50, 473);
             this.AddFiles_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -198,7 +198,7 @@
             this.AddFolder_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddFolder_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.AddFolder_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddFolder_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddFolder_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddFolder_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.AddFolder_btn.Location = new System.Drawing.Point(232, 473);
             this.AddFolder_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -209,31 +209,6 @@
             this.AddFolder_btn.UseVisualStyleBackColor = false;
             this.AddFolder_btn.Click += new System.EventHandler(this.AddFolder_btn_Click_1);
             // 
-            // Repeat_check
-            // 
-            this.Repeat_check.AutoSize = true;
-            this.Repeat_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Repeat_check.Location = new System.Drawing.Point(437, 473);
-            this.Repeat_check.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Repeat_check.Name = "Repeat_check";
-            this.Repeat_check.Size = new System.Drawing.Size(134, 37);
-            this.Repeat_check.TabIndex = 10;
-            this.Repeat_check.Text = "Repeat";
-            this.Repeat_check.UseVisualStyleBackColor = true;
-            this.Repeat_check.CheckedChanged += new System.EventHandler(this.Repeat_check_CheckedChanged);
-            // 
-            // Shuffle_check
-            // 
-            this.Shuffle_check.AutoSize = true;
-            this.Shuffle_check.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shuffle_check.Location = new System.Drawing.Point(579, 473);
-            this.Shuffle_check.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Shuffle_check.Name = "Shuffle_check";
-            this.Shuffle_check.Size = new System.Drawing.Size(131, 37);
-            this.Shuffle_check.TabIndex = 11;
-            this.Shuffle_check.Text = "Shuffle";
-            this.Shuffle_check.UseVisualStyleBackColor = true;
-            // 
             // Play_lebel
             // 
             this.Play_lebel.AutoSize = true;
@@ -243,16 +218,19 @@
             this.Play_lebel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
             this.Play_lebel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
             this.Play_lebel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Play_lebel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
-            this.Play_lebel.ForeColor = System.Drawing.Color.Crimson;
-            this.Play_lebel.Location = new System.Drawing.Point(732, 434);
+            this.Play_lebel.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Play_lebel.ForeColor = System.Drawing.Color.Green;
+            this.Play_lebel.Location = new System.Drawing.Point(684, 525);
             this.Play_lebel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Play_lebel.Name = "Play_lebel";
-            this.Play_lebel.Size = new System.Drawing.Size(147, 85);
+            this.Play_lebel.Size = new System.Drawing.Size(344, 75);
             this.Play_lebel.TabIndex = 12;
             this.Play_lebel.Text = "Play";
             this.Play_lebel.UseVisualStyleBackColor = true;
             this.Play_lebel.Click += new System.EventHandler(this.Play_lebel_Click_1);
+            this.Play_lebel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Play_lebel_MouseDown);
+            this.Play_lebel.MouseLeave += new System.EventHandler(this.Play_lebel_MouseLeave);
+            this.Play_lebel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Play_lebel_MouseMove);
             // 
             // Playlist_datagrid
             // 
@@ -284,6 +262,7 @@
             this.Playlist_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Playlist_datagrid.Size = new System.Drawing.Size(726, 296);
             this.Playlist_datagrid.TabIndex = 13;
+            this.Playlist_datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Playlist_datagrid_CellContentClick);
             // 
             // ID
             // 
@@ -330,8 +309,6 @@
             this.ClientSize = new System.Drawing.Size(1052, 614);
             this.Controls.Add(this.Playlist_datagrid);
             this.Controls.Add(this.Play_lebel);
-            this.Controls.Add(this.Shuffle_check);
-            this.Controls.Add(this.Repeat_check);
             this.Controls.Add(this.AddFolder_btn);
             this.Controls.Add(this.AddFiles_btn);
             this.Controls.Add(this.Menu_panel);
@@ -361,8 +338,6 @@
         private System.Windows.Forms.Button NewPlaylist_btn;
         private System.Windows.Forms.Button AddFiles_btn;
         private System.Windows.Forms.Button AddFolder_btn;
-        private System.Windows.Forms.CheckBox Repeat_check;
-        private System.Windows.Forms.CheckBox Shuffle_check;
         private System.Windows.Forms.Button Play_lebel;
         private System.Windows.Forms.DataGridView Playlist_datagrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

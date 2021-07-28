@@ -155,16 +155,16 @@ namespace Wave2.Forms
                 Playlist_datagrid.Rows.Add((i + 1), Names[i]);
             }
 
-            Repeat_check.Checked = AutoPlayl.AllowRepitition;
-            Shuffle_check.Checked = AutoPlayl.AllowShuffle;
+           // Repeat_check.Checked = AutoPlayl.AllowRepitition;
+           // Shuffle_check.Checked = AutoPlayl.AllowShuffle;
         }
 
         public void ClearDataGrid()
         {
             Playlist_datagrid.Rows.Clear();
 
-            Repeat_check.Checked = AutoPlayl.AllowRepitition;
-            Shuffle_check.Checked = AutoPlayl.AllowShuffle;
+            //Repeat_check.Checked = AutoPlayl.AllowRepitition;
+            //Shuffle_check.Checked = AutoPlayl.AllowShuffle;
         }
 
 
@@ -196,8 +196,8 @@ namespace Wave2.Forms
 
         private void Play_lebel_Click_1(object sender, EventArgs e)
         {
-            AutoPlayl.AllowRepitition = Repeat_check.Checked;
-            AutoPlayl.AllowShuffle = Shuffle_check.Checked;
+           // AutoPlayl.AllowRepitition = Repeat_check.Checked;
+           // AutoPlayl.AllowShuffle = Shuffle_check.Checked;
             if (DoClearPlaylist)
             {
                 List.NewPlaylist();
@@ -257,6 +257,9 @@ namespace Wave2.Forms
 
         }
 
-        
+        private void Playlist_datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

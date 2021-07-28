@@ -117,4 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>   Play / Pause:
+  Space Key (or) Enter Key
+
+Go Forward:
+  Right Arrow 
+  
+  Go Backward:
+  Left Arrow 
+  
+  Fullscreen:
+  F (or) 5 (or) 6 (or) Ctrl+Enter Key
+
+ Volume Up: 
+   Up Arrow  
+  
+ Volume Down:
+  Down Arrow 
+  
+  
+  </value>
+  </data>
 </root>

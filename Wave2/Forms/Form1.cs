@@ -6,18 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Wave2.Forms;
 using Wave2.Settings;
 using Wave2.Classes;
+//using Wave2.Formshelp;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using System.IO;
 
-
-namespace Wave2
+namespace Wave2.Forms
 {
     public partial class Form1 : Form
     {
+       
 
         #region Fields And Properties
 
@@ -71,7 +72,7 @@ namespace Wave2
         #endregion
 
         #region MainForm 
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -110,7 +111,7 @@ namespace Wave2
         }
 
         #region PinBtn
-        private void PinIcon_btn_Click_1(object sender, EventArgs e)
+        private void PinIcon_btn_Click(object sender, EventArgs e)
         {
             WindowStates.TogglePin(this, PinIcon_btn);
         }
@@ -145,7 +146,7 @@ namespace Wave2
 
         #region FullscreenBtn
 
-        private void FullscreenBtn_Click_1(object sender, EventArgs e)
+        private void FullscreenBtn_Click(object sender, EventArgs e)
         {
             WindowStates.FullScreen(this, FullscreenBtn);
         }
@@ -194,16 +195,47 @@ namespace Wave2
 
         private void Player_wmp_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
+            if (Player_wmp.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                UpdateTimer.Start();
+                PlayPauseIcon(false);
+            }
 
+            else
+            {
+                UpdateTimer.Stop();
+                PlayPauseIcon(true);
+            }
+
+            if (Player_wmp.playState == WMPLib.WMPPlayState.wmppsMediaEnded)
+            {
+                if (isReady)
+                {
+                    AutoPlayl.PlayNextTrack(Player_wmp);
+                    UpdateTimer.Start();
+                    PlayPauseIcon(false);
+                }
+            }
+
+            if (Player_wmp.playState == WMPLib.WMPPlayState.wmppsReady)
+            {
+                try
+                {
+                    Player_wmp.Ctlcontrols.play();
+                    UpdateTimer.Start();
+                    PlayPauseIcon(false);
+                }
+                catch { }
+            }
         }
 
-        private void Volume_trackBar_Scroll_1(object sender, EventArgs e)
+        private void Volume_trackBar_Scroll(object sender, EventArgs e)
         {
             Player_wmp.settings.volume = Volume_trackBar.Value;
             Controlcen.lastVolume = Player_wmp.settings.volume;
         }
 
-        private void Volume_btn_Click_1(object sender, EventArgs e)
+        private void Volume_btn_Click(object sender, EventArgs e)
         {
             Controlcen.ToggleMute(Player_wmp, Volume_btn, Volume_trackBar);
         }
@@ -228,7 +260,7 @@ namespace Wave2
 
         #region Main Control Events (from bottom panel)
 
-        private void PlayPause_btn_Click_1(object sender, EventArgs e)
+        private void PlayPause_btn_Click(object sender, EventArgs e)
         {
             if (Player_wmp.Visible == false)
             {
@@ -251,13 +283,13 @@ namespace Wave2
             }
         }
 
-        private void Stop_btn_Click_1(object sender, EventArgs e)
+        private void Stop_btn_Click(object sender, EventArgs e)
         {
             Player_wmp.Ctlcontrols.fastForward();
             TrackBar.Value = 0;
         }
 
-        private void Replay_btn_Click_1(object sender, EventArgs e)
+        private void Replay_btn_Click(object sender, EventArgs e)
         {
             if (Player_wmp.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
@@ -265,7 +297,7 @@ namespace Wave2
             }
         }
 
-        private void Next_btn_Click_1(object sender, EventArgs e)
+        private void Next_btn_Click(object sender, EventArgs e)
         {
             AutoPlayl.PlayNextTrack(Player_wmp);
 
@@ -283,7 +315,7 @@ namespace Wave2
             }
         }
 
-        private void Previous_btn_Click_1(object sender, EventArgs e)
+        private void Previous_btn_Click(object sender, EventArgs e)
         {
             AutoPlayl.PlayPreviousTrack(Player_wmp);
 
@@ -315,8 +347,14 @@ namespace Wave2
             if (Size.Height == 428) this.Size = new Size(641, 102);
             else this.Size = new Size(641, 428);
         }
-
-        private void NewPlaylist_option_cms_Click(object sender, EventArgs e)
+        /* private void radioButton3_CheckedChanged(object sender, EventArgs e)
+         {
+         NewPlaylist_option_cms_Click
+             if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+             else Playlist_FlowPanel.Visible = false;
+             childOpen(new Forms.PlaylistForm());
+         }*/
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             foCUS.Focus();
             PlaylistForm pf = new PlaylistForm();
@@ -344,7 +382,7 @@ namespace Wave2
 
         private void About_option_cms_Click(object sender, EventArgs e)
         {
-            AboutForm af = new AboutForm();
+            AddMusic af = new AddMusic();
         }
 
         private void Exit_option_cms_Click(object sender, EventArgs e)
@@ -383,7 +421,6 @@ namespace Wave2
 
         private void Intializer()
         {
-            Player_wmp.CreateControl();
             Player_wmp.settings.volume = Volume_trackBar.Value;
             Player_wmp.Ctlenabled = false;
             Player_wmp.windowlessVideo = true;
@@ -462,13 +499,14 @@ namespace Wave2
             btn22.TabStop = false;
             btn22.Text = "New Playlist";
             btn22.UseVisualStyleBackColor = false;
-            btn22.Click += new System.EventHandler(this.NewPlayLBtn_Click_1);
+            btn22.Click += new System.EventHandler(this.NewPlayLBtn_Click);
             Playlist_FlowPanel.Controls.Add(btn22);
         }
 
-        private void NewPlayLBtn_Click_1(object sender, EventArgs e)
+        private void NewPlayLBtn_Click(object sender, EventArgs e)
         {
-            NewPlaylist_option_cms_Click(sender, e);
+            //NewPlaylist_option_cms_Click(sender, e);
+            radioButton3_CheckedChanged(sender, e);
         }
 
         private void BottomMain_btn_MouseDown(object sender, MouseEventArgs e)
@@ -483,11 +521,11 @@ namespace Wave2
             this.Focus();
         }
 
-        private void SettingsBtn_Click_1(object sender, EventArgs e)
+        /*private void SettingsBtn_Click(object sender, EventArgs e)
         {
             foCUS.Focus();
             FormSetting sf = new FormSetting();
-        }
+        }*/
 
         private void FoucsToMain_trackBar_MouseUp(object sender, MouseEventArgs e)
         {
@@ -495,15 +533,15 @@ namespace Wave2
             {
                 cc.ForeColor = SystemColors.ButtonFace;
             }
-            PlaylistShow_Btn.ForeColor = SystemColors.ButtonFace;
+           // radioButton3_CheckedChanged.ForeColor = SystemColors.ButtonFace;
             foCUS.Focus();
         }
 
-        private void PlaylistShow_Btn_Click(object sender, EventArgs e)
-        {
-            if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
-            else Playlist_FlowPanel.Visible = false;
-        }
+        //private void PlaylistShow_Btn_Click_1(object sender, EventArgs e)
+        //{
+            //if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+            //else Playlist_FlowPanel.Visible = false;
+        //}
 
         static SizeF Maxsize = new SizeF();
 
@@ -551,7 +589,13 @@ namespace Wave2
 
         private void Player_wmp_ClickEvent(object sender, AxWMPLib._WMPOCXEvents_ClickEvent e)
         {
+            Playlist_FlowPanel.Visible = false;
+            this.Focus();
 
+            if (e.nButton == 2)
+            {
+                Main_cms.Show(MousePosition);
+            }
         }
 
         private void ShowMainCms_MouseClick(object sender, MouseEventArgs e)
@@ -629,37 +673,169 @@ namespace Wave2
             childForm.BringToFront();
             childForm.Show();
         }
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+            private void EliteMediaPlayer_label_Click(object sender, EventArgs e)
         {
-            childOpen(new Forms.PlaylistForm());
+
+        }
+        private void TrackBar_Scroll(object sender, ScrollEventArgs e)
+        {
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Video_panel_Paint(object sender, PaintEventArgs e)
         {
-            childOpen(new Forms.Support());
+
+        }
+
+        private void foCUS_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            childOpen(new Settings.FormSetting());
+            //childOpen(new FormSetting()); 
+            foCUS.Focus();
+            Settings.FormSetting pf = new Settings.FormSetting();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
         }
 
-        private void Playlist_FlowPanel_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //childOpen(new Forms.Support());
+            foCUS.Focus();
+            Support pf = new Support();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
+
+        private void MainControl_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void EliteMediaPlayer_label_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            childOpen(new Form1());
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //childOpen(new Forms.AddMusic());
+            foCUS.Focus();
+            AddMusic pf = new AddMusic();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
+
+        private void radioButton4_CheckedChanged_1(object sender, EventArgs e)
+        {
+            foCUS.Focus();
+            Form2 pf = new Form2();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
+
+        private void Player_wmp_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        private void menu_Paint(object sender, PaintEventArgs e)
         {
-            childOpen(new Forms.Helptip());
+
         }
 
-        private void Video_panel_Paint(object sender, PaintEventArgs e)
+        private void EliteMediaPlayer_label_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleBar_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -53,7 +53,7 @@ namespace Wave2.Classes
                 Player.Ctlcontrols.play();
                 currentMediaAddress = MediaAddress;
                 AutoPlayl.CurrentTrack = MediaAddress;
-                Form1.isReady = true;
+                Forms.Form1.isReady = true;
             }
             else
             {

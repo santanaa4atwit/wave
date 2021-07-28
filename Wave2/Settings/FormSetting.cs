@@ -75,5 +75,10 @@ namespace Wave2.Settings
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSetting));
             this.TitleBar_panel = new System.Windows.Forms.Panel();
             this.Default_btn = new System.Windows.Forms.Button();
             this.foCUS = new System.Windows.Forms.Panel();
             this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
             this.Cross_Button = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Backward_cbox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,7 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TitleBar_panel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -70,7 +65,6 @@
             // 
             this.TitleBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.TitleBar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TitleBar_panel.Controls.Add(this.Default_btn);
             this.TitleBar_panel.Controls.Add(this.foCUS);
             this.TitleBar_panel.Controls.Add(this.EliteMediaPlayer_label);
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
@@ -80,6 +74,7 @@
             this.TitleBar_panel.Name = "TitleBar_panel";
             this.TitleBar_panel.Size = new System.Drawing.Size(961, 51);
             this.TitleBar_panel.TabIndex = 4;
+            this.TitleBar_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
             // Default_btn
             // 
@@ -88,12 +83,12 @@
             this.Default_btn.FlatAppearance.BorderSize = 0;
             this.Default_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.Default_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Default_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Default_btn.Font = new System.Drawing.Font("Lucida Bright", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Default_btn.ForeColor = System.Drawing.Color.IndianRed;
-            this.Default_btn.Location = new System.Drawing.Point(798, 2);
+            this.Default_btn.Location = new System.Drawing.Point(820, 562);
             this.Default_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Default_btn.Name = "Default_btn";
-            this.Default_btn.Size = new System.Drawing.Size(90, 46);
+            this.Default_btn.Size = new System.Drawing.Size(97, 46);
             this.Default_btn.TabIndex = 10;
             this.Default_btn.Text = "Default";
             this.Default_btn.UseVisualStyleBackColor = true;
@@ -110,14 +105,15 @@
             // 
             this.EliteMediaPlayer_label.AutoSize = true;
             this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
-            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
             this.EliteMediaPlayer_label.Location = new System.Drawing.Point(9, 6);
             this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
-            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(118, 36);
+            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(134, 34);
             this.EliteMediaPlayer_label.TabIndex = 6;
             this.EliteMediaPlayer_label.Text = "Settings";
+            this.EliteMediaPlayer_label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
             // Cross_Button
             // 
@@ -136,43 +132,6 @@
             this.Cross_Button.Text = "X";
             this.Cross_Button.UseVisualStyleBackColor = true;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Location = new System.Drawing.Point(466, 61);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(405, 569);
-            this.panel2.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Khaki;
-            this.label10.Location = new System.Drawing.Point(32, 6);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 39);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "ShortKeys:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.richTextBox1.Location = new System.Drawing.Point(26, 55);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(375, 509);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -181,10 +140,10 @@
             this.panel1.Controls.Add(this.Forward_cbox);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.VolDown_cbox);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.VolUp_cbox);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(43, 99);
+            this.panel1.Controls.Add(this.VolUp_cbox);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(448, 109);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 284);
@@ -225,7 +184,7 @@
             "28",
             "29",
             "30"});
-            this.Backward_cbox.Location = new System.Drawing.Point(268, 223);
+            this.Backward_cbox.Location = new System.Drawing.Point(246, 89);
             this.Backward_cbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Backward_cbox.Name = "Backward_cbox";
             this.Backward_cbox.Size = new System.Drawing.Size(84, 28);
@@ -234,12 +193,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(18, 222);
+            this.label4.Location = new System.Drawing.Point(4, 84);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 28);
+            this.label4.Size = new System.Drawing.Size(238, 27);
             this.label4.TabIndex = 17;
             this.label4.Text = "Go Backward (sec.)";
             // 
@@ -278,7 +237,7 @@
             "28",
             "29",
             "30"});
-            this.Forward_cbox.Location = new System.Drawing.Point(268, 166);
+            this.Forward_cbox.Location = new System.Drawing.Point(246, 26);
             this.Forward_cbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Forward_cbox.Name = "Forward_cbox";
             this.Forward_cbox.Size = new System.Drawing.Size(84, 28);
@@ -287,12 +246,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(18, 165);
+            this.label5.Location = new System.Drawing.Point(4, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 28);
+            this.label5.Size = new System.Drawing.Size(222, 27);
             this.label5.TabIndex = 15;
             this.label5.Text = "Go Forward (sec.)";
             // 
@@ -321,7 +280,7 @@
             "18",
             "19",
             "20"});
-            this.VolDown_cbox.Location = new System.Drawing.Point(268, 106);
+            this.VolDown_cbox.Location = new System.Drawing.Point(246, 198);
             this.VolDown_cbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VolDown_cbox.Name = "VolDown_cbox";
             this.VolDown_cbox.Size = new System.Drawing.Size(84, 28);
@@ -330,12 +289,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(18, 105);
+            this.label3.Location = new System.Drawing.Point(4, 198);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 28);
+            this.label3.Size = new System.Drawing.Size(183, 27);
             this.label3.TabIndex = 13;
             this.label3.Text = "Volume Down";
             // 
@@ -364,7 +323,7 @@
             "18",
             "19",
             "20"});
-            this.VolUp_cbox.Location = new System.Drawing.Point(268, 49);
+            this.VolUp_cbox.Location = new System.Drawing.Point(246, 142);
             this.VolUp_cbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VolUp_cbox.Name = "VolUp_cbox";
             this.VolUp_cbox.Size = new System.Drawing.Size(84, 28);
@@ -373,26 +332,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(18, 48);
+            this.label2.Location = new System.Drawing.Point(4, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 28);
+            this.label2.Size = new System.Drawing.Size(146, 27);
             this.label2.TabIndex = 11;
             this.label2.Text = "Volume Up";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(48, 78);
+            this.label1.Location = new System.Drawing.Point(465, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 39);
+            this.label1.Size = new System.Drawing.Size(318, 36);
             this.label1.TabIndex = 13;
             this.label1.Text = "ShortKeys Controls";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -405,7 +365,7 @@
             this.panel3.Controls.Add(this.Volume_cbox);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(43, 417);
+            this.panel3.Location = new System.Drawing.Point(25, 109);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(395, 208);
@@ -463,7 +423,7 @@
             // 
             this.FullScrOn_chk.AutoSize = true;
             this.FullScrOn_chk.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.FullScrOn_chk.Location = new System.Drawing.Point(292, 138);
+            this.FullScrOn_chk.Location = new System.Drawing.Point(292, 90);
             this.FullScrOn_chk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FullScrOn_chk.Name = "FullScrOn_chk";
             this.FullScrOn_chk.Size = new System.Drawing.Size(57, 24);
@@ -476,7 +436,7 @@
             this.FullScrOff_chk.AutoSize = true;
             this.FullScrOff_chk.Checked = true;
             this.FullScrOff_chk.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.FullScrOff_chk.Location = new System.Drawing.Point(216, 138);
+            this.FullScrOff_chk.Location = new System.Drawing.Point(204, 89);
             this.FullScrOff_chk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FullScrOff_chk.Name = "FullScrOff_chk";
             this.FullScrOff_chk.Size = new System.Drawing.Size(66, 24);
@@ -488,12 +448,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(18, 138);
+            this.label9.Location = new System.Drawing.Point(18, 85);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 28);
+            this.label9.Size = new System.Drawing.Size(136, 27);
             this.label9.TabIndex = 23;
             this.label9.Text = "Fullscreen";
             // 
@@ -602,7 +562,7 @@
             "98",
             "99",
             "100"});
-            this.Volume_cbox.Location = new System.Drawing.Point(216, 86);
+            this.Volume_cbox.Location = new System.Drawing.Point(204, 142);
             this.Volume_cbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Volume_cbox.Name = "Volume_cbox";
             this.Volume_cbox.Size = new System.Drawing.Size(128, 28);
@@ -611,36 +571,36 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label8.Location = new System.Drawing.Point(18, 89);
+            this.label8.Location = new System.Drawing.Point(18, 142);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 28);
+            this.label8.Size = new System.Drawing.Size(105, 27);
             this.label8.TabIndex = 22;
             this.label8.Text = "Volume";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label7.Location = new System.Drawing.Point(18, 37);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 28);
+            this.label7.Size = new System.Drawing.Size(80, 27);
             this.label7.TabIndex = 19;
             this.label7.Text = "Pined";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Lucida Bright", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(60, 396);
+            this.label6.Location = new System.Drawing.Point(42, 77);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(245, 39);
+            this.label6.Size = new System.Drawing.Size(275, 36);
             this.label6.TabIndex = 27;
             this.label6.Text = "Default Controls";
             // 
@@ -650,11 +610,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(961, 640);
+            this.Controls.Add(this.Default_btn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.TitleBar_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSetting";
@@ -662,8 +622,6 @@
             this.Load += new System.EventHandler(this.FormSetting_Load);
             this.TitleBar_panel.ResumeLayout(false);
             this.TitleBar_panel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -682,9 +640,6 @@
         private System.Windows.Forms.Panel foCUS;
         private System.Windows.Forms.Label EliteMediaPlayer_label;
         private System.Windows.Forms.Button Cross_Button;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox Backward_cbox;
         private System.Windows.Forms.Label label4;
