@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wave2.Classes;
 
 namespace Wave2.Forms
 {
@@ -47,6 +49,46 @@ namespace Wave2.Forms
         private void Cross_Button_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Playlist_datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
+            {
+                conn.Open();
+                SQLiteDataAdapter da = new SQLiteDataAdapter("SELECT TrackTitle, Artists, AlbumTitle, AlbumArtists, Genres, DiscNumber, TrackNumber, Year, FilePath FROM Track", conn);
+                DataSet ds = new System.Data.DataSet();
+
+                da.Fill(ds, "Track");
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount =
+        dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                string[] sb = new String[1000];
+
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    DataGridViewRow row = dataGridView1.SelectedRows[i];
+                    sb[i] = row.Cells["FilePath"].Value.ToString();
+                }
+
+                List.LoadLibraryPlaylist(sb);
+                if (DoClearPlaylist)
+                {
+                    List.NewPlaylist();
+                }
+            }
         }
     }
 }

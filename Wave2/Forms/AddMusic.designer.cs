@@ -49,19 +49,19 @@
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
             this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
-            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.TitleBar_panel.Name = "TitleBar_panel";
-            this.TitleBar_panel.Size = new System.Drawing.Size(768, 51);
+            this.TitleBar_panel.Size = new System.Drawing.Size(1024, 63);
             this.TitleBar_panel.TabIndex = 4;
             this.TitleBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.TitleBar_panel_Paint);
             this.TitleBar_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
             // foCUS
             // 
-            this.foCUS.Location = new System.Drawing.Point(366, 9);
-            this.foCUS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.foCUS.Location = new System.Drawing.Point(488, 11);
+            this.foCUS.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.foCUS.Name = "foCUS";
-            this.foCUS.Size = new System.Drawing.Size(27, 31);
+            this.foCUS.Size = new System.Drawing.Size(36, 39);
             this.foCUS.TabIndex = 9;
             // 
             // EliteMediaPlayer_label
@@ -70,10 +70,10 @@
             this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
             this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
-            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(9, 6);
-            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(12, 8);
+            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
-            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(144, 36);
+            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(190, 46);
             this.EliteMediaPlayer_label.TabIndex = 6;
             this.EliteMediaPlayer_label.Text = "Add Music";
             this.EliteMediaPlayer_label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
@@ -86,10 +86,10 @@
             this.Cross_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cross_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cross_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Cross_Button.Location = new System.Drawing.Point(696, 2);
-            this.Cross_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Cross_Button.Location = new System.Drawing.Point(929, 2);
+            this.Cross_Button.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Cross_Button.Name = "Cross_Button";
-            this.Cross_Button.Size = new System.Drawing.Size(68, 46);
+            this.Cross_Button.Size = new System.Drawing.Size(91, 58);
             this.Cross_Button.TabIndex = 2;
             this.Cross_Button.Text = "X";
             this.Cross_Button.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(0, 68);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(765, 404);
+            this.label1.Size = new System.Drawing.Size(1020, 505);
             this.label1.TabIndex = 5;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -114,10 +114,10 @@
             this.AddFiles_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddFiles_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddFiles_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.AddFiles_btn.Location = new System.Drawing.Point(135, 96);
-            this.AddFiles_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddFiles_btn.Location = new System.Drawing.Point(180, 120);
+            this.AddFiles_btn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AddFiles_btn.Name = "AddFiles_btn";
-            this.AddFiles_btn.Size = new System.Drawing.Size(483, 67);
+            this.AddFiles_btn.Size = new System.Drawing.Size(644, 84);
             this.AddFiles_btn.TabIndex = 9;
             this.AddFiles_btn.Text = "Add Files";
             this.AddFiles_btn.UseVisualStyleBackColor = false;
@@ -132,13 +132,14 @@
             this.AddFolder_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddFolder_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddFolder_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.AddFolder_btn.Location = new System.Drawing.Point(135, 195);
-            this.AddFolder_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddFolder_btn.Location = new System.Drawing.Point(180, 244);
+            this.AddFolder_btn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.AddFolder_btn.Name = "AddFolder_btn";
-            this.AddFolder_btn.Size = new System.Drawing.Size(483, 68);
+            this.AddFolder_btn.Size = new System.Drawing.Size(644, 85);
             this.AddFolder_btn.TabIndex = 10;
             this.AddFolder_btn.Text = "Add Folder";
             this.AddFolder_btn.UseVisualStyleBackColor = false;
+            this.AddFolder_btn.Click += new System.EventHandler(this.AddFolder_btn_Click);
             // 
             // button1
             // 
@@ -149,10 +150,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(306, 370);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(408, 462);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 55);
+            this.button1.Size = new System.Drawing.Size(281, 69);
             this.button1.TabIndex = 11;
             this.button1.Text = "Add to Library";
             this.button1.UseVisualStyleBackColor = false;
@@ -166,10 +167,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Brown;
-            this.button2.Location = new System.Drawing.Point(525, 370);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(700, 462);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 55);
+            this.button2.Size = new System.Drawing.Size(273, 69);
             this.button2.TabIndex = 12;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -177,9 +178,9 @@
             // 
             // AddMusic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 467);
+            this.ClientSize = new System.Drawing.Size(1024, 584);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddFolder_btn);
@@ -187,6 +188,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TitleBar_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddMusic";
             this.Text = "AboutForm";
             this.TitleBar_panel.ResumeLayout(false);

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wave2.Classes;
 
 namespace Wave2.Forms
 {
@@ -51,7 +52,21 @@ namespace Wave2.Forms
 
         private void AddFiles_btn_Click(object sender, EventArgs e)
         {
+            {
+                OpenFileDialog od = new OpenFileDialog
+                {
+                    Multiselect = true,
+                    //Filter = "Wav(*.wav)|*.wav|Acc(*.aac)|*.aac|Wma(*.wma)|*.wma|Wmv(*.wmv)|*.wmv|Avi(*.avi)|*.avi|Mpg(*.mpg)|*.mpg|Mpeg(*.mpeg)|*.mpeg|M1v(*.m1v)|*.m1v|Mp2(*.mp2)|*.mp2|Mp3(*.mp3)|*.mp3|Mpa(*.mpa)|*.mpa|Mpe(*.mpe)|*.mpe|M3u(*.m3u)|*.m3u|Mp4(*.mp4)|*.mp4|Mov(*.mov)|*.mov|3g2(*.3g2)|*.3g2|3gp2(*.3gp2)|*.3gp2|3gp(*.3gp)|*.3gp|3gpp(*.3gpp)|*.3gpp|M4a(*.m4a)|*.m4a|Cda(*.cda)|*.cda|Aif(*.aif)|*.aif|Aifc(*.aifc)|*.aifc|Aiff(*.aiff)|*.aiff|Mid(*.mid)|*.mid|Midi(*.midi)|*.midi|Rmi(*.rmi)|*.rmi|All files (*.*)|*.*",
+                    Filter = "All Media Files|*.wav;*.aac;*.wma;*.wmv;*.avi;*.mpg;*.mpeg;*.m1v;*.mp2;*.mp3;*.mpa;*.mpe;*.m3u;*.mp4;*.mov;*.3g2;*.3gp2;*.3gp;*.3gpp;*.m4a;*.cda;*.aif;*.aifc;*.aiff;*.mid;*.midi;*.rmi;*.mkv;*.WAV;*.AAC;*.WMA;*.WMV;*.AVI;*.MPG;*.MPEG;*.M1V;*.MP2;*.MP3;*.MPA;*.MPE;*.M3U;*.MP4;*.MOV;*.3G2;*.3GP2;*.3GP;*.3GPP;*.M4A;*.CDA;*.AIF;*.AIFC;*.AIFF;*.MID;*.MIDI;*.RMI;*.MKV",
+                    DefaultExt = "All Media Files|*.wav;*.aac;*.wma;*.wmv;*.avi;*.mpg;*.mpeg;*.m1v;*.mp2;*.mp3;*.mpa;*.mpe;*.m3u;*.mp4;*.mov;*.3g2;*.3gp2;*.3gp;*.3gpp;*.m4a;*.cda;*.aif;*.aifc;*.aiff;*.mid;*.midi;*.rmi;*.mkv;*.WAV;*.AAC;*.WMA;*.WMV;*.AVI;*.MPG;*.MPEG;*.M1V;*.MP2;*.MP3;*.MPA;*.MPE;*.M3U;*.MP4;*.MOV;*.3G2;*.3GP2;*.3GP;*.3GPP;*.M4A;*.CDA;*.AIF;*.AIFC;*.AIFF;*.MID;*.MIDI;*.RMI;*.MKV"
+                };
 
+                if (od.ShowDialog() == DialogResult.OK)
+                {
+                    List.AddToLibrary(od.FileNames);
+                    DoClearPlaylist = false;
+                }
+            }
         }
 
         private void TitleBar_panel_Paint(object sender, PaintEventArgs e)
@@ -62,6 +77,18 @@ namespace Wave2.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void AddFolder_btn_Click(object sender, EventArgs e)
+        {
+            {
+                FolderBrowserDialog fb = new FolderBrowserDialog();
+                if (fb.ShowDialog() == DialogResult.OK)
+                {
+                    List.AddFolder(fb.SelectedPath);
+                    DoClearPlaylist = false;
+                }
+            }
         }
     }
 }
