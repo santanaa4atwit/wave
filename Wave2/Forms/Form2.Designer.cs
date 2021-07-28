@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
             this.foCUS = new System.Windows.Forms.Panel();
             this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
             this.Cross_Button = new System.Windows.Forms.Button();
+            this.Playlist_datagrid = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AudioNames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TitleBar_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Playlist_datagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleBar_panel
@@ -90,18 +95,69 @@
             this.Cross_Button.UseVisualStyleBackColor = true;
             this.Cross_Button.Click += new System.EventHandler(this.Cross_Button_Click);
             // 
+            // Playlist_datagrid
+            // 
+            this.Playlist_datagrid.AllowDrop = true;
+            this.Playlist_datagrid.AllowUserToAddRows = false;
+            this.Playlist_datagrid.AllowUserToDeleteRows = false;
+            this.Playlist_datagrid.AllowUserToResizeColumns = false;
+            this.Playlist_datagrid.AllowUserToResizeRows = false;
+            this.Playlist_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Playlist_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Playlist_datagrid.ColumnHeadersHeight = 34;
+            this.Playlist_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Playlist_datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.AudioNames});
+            this.Playlist_datagrid.Location = new System.Drawing.Point(37, 77);
+            this.Playlist_datagrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Playlist_datagrid.Name = "Playlist_datagrid";
+            this.Playlist_datagrid.ReadOnly = true;
+            this.Playlist_datagrid.RowHeadersWidth = 62;
+            this.Playlist_datagrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Playlist_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Playlist_datagrid.Size = new System.Drawing.Size(726, 296);
+            this.Playlist_datagrid.TabIndex = 14;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "SNo.";
+            this.ID.MinimumWidth = 70;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 70;
+            // 
+            // AudioNames
+            // 
+            this.AudioNames.HeaderText = "Name";
+            this.AudioNames.MinimumWidth = 520;
+            this.AudioNames.Name = "AudioNames";
+            this.AudioNames.ReadOnly = true;
+            this.AudioNames.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AudioNames.Width = 520;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Playlist_datagrid);
             this.Controls.Add(this.TitleBar_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
             this.TitleBar_panel.ResumeLayout(false);
             this.TitleBar_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Playlist_datagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +168,8 @@
         private System.Windows.Forms.Panel foCUS;
         private System.Windows.Forms.Label EliteMediaPlayer_label;
         private System.Windows.Forms.Button Cross_Button;
+        private System.Windows.Forms.DataGridView Playlist_datagrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AudioNames;
     }
 }

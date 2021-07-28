@@ -99,7 +99,7 @@
             this.MainControl_panel.Controls.Add(this.Next_btn);
             this.MainControl_panel.Controls.Add(this.Stop_btn);
             this.MainControl_panel.Controls.Add(this.PlayPause_btn);
-            this.MainControl_panel.Location = new System.Drawing.Point(355, 4);
+            this.MainControl_panel.Location = new System.Drawing.Point(355, -1);
             this.MainControl_panel.Margin = new System.Windows.Forms.Padding(0);
             this.MainControl_panel.Name = "MainControl_panel";
             this.MainControl_panel.Size = new System.Drawing.Size(300, 58);
@@ -220,10 +220,10 @@
             this.BelowPanel.Controls.Add(this.Volume_btn);
             this.BelowPanel.Controls.Add(this.FullscreenBtn);
             this.BelowPanel.Controls.Add(this.MainControl_panel);
-            this.BelowPanel.Location = new System.Drawing.Point(-11, 536);
+            this.BelowPanel.Location = new System.Drawing.Point(9, 541);
             this.BelowPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BelowPanel.Name = "BelowPanel";
-            this.BelowPanel.Size = new System.Drawing.Size(1008, 67);
+            this.BelowPanel.Size = new System.Drawing.Size(1008, 62);
             this.BelowPanel.TabIndex = 3;
             this.BelowPanel.Click += new System.EventHandler(this.HidePlaylist_OnClick);
             this.BelowPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowMainCms_MouseClick);
@@ -233,7 +233,7 @@
             this.Volume_trackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Volume_trackBar.AutoSize = false;
             this.Volume_trackBar.LargeChange = 10;
-            this.Volume_trackBar.Location = new System.Drawing.Point(53, 20);
+            this.Volume_trackBar.Location = new System.Drawing.Point(53, 15);
             this.Volume_trackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Volume_trackBar.Maximum = 100;
             this.Volume_trackBar.Name = "Volume_trackBar";
@@ -254,7 +254,7 @@
             this.Volume_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Volume_btn.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Volume_btn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Volume_btn.Location = new System.Drawing.Point(3, -59);
+            this.Volume_btn.Location = new System.Drawing.Point(3, -64);
             this.Volume_btn.Margin = new System.Windows.Forms.Padding(0);
             this.Volume_btn.Name = "Volume_btn";
             this.Volume_btn.Size = new System.Drawing.Size(46, 126);
@@ -276,7 +276,7 @@
             this.FullscreenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FullscreenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FullscreenBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FullscreenBtn.Location = new System.Drawing.Point(958, 23);
+            this.FullscreenBtn.Location = new System.Drawing.Point(958, 18);
             this.FullscreenBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FullscreenBtn.Name = "FullscreenBtn";
             this.FullscreenBtn.Size = new System.Drawing.Size(30, 31);
@@ -367,10 +367,10 @@
             this.Video_panel.Controls.Add(this.Playlist_FlowPanel);
             this.Video_panel.Controls.Add(this.TrackBar);
             this.Video_panel.Controls.Add(this.Player_wmp);
-            this.Video_panel.Location = new System.Drawing.Point(0, 8);
+            this.Video_panel.Location = new System.Drawing.Point(3, 8);
             this.Video_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Video_panel.Name = "Video_panel";
-            this.Video_panel.Size = new System.Drawing.Size(1000, 538);
+            this.Video_panel.Size = new System.Drawing.Size(1009, 532);
             this.Video_panel.TabIndex = 2;
             this.Video_panel.Click += new System.EventHandler(this.Video_panel_Click);
             this.Video_panel.DragDrop += new System.Windows.Forms.DragEventHandler(this.Video_panel_DragDrop);
@@ -385,10 +385,10 @@
             this.Playlist_FlowPanel.BackColor = System.Drawing.Color.Gray;
             this.Playlist_FlowPanel.Controls.Add(this.NewPlayLBtn);
             this.Playlist_FlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.Playlist_FlowPanel.Location = new System.Drawing.Point(27, 10);
+            this.Playlist_FlowPanel.Location = new System.Drawing.Point(36, 10);
             this.Playlist_FlowPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Playlist_FlowPanel.Name = "Playlist_FlowPanel";
-            this.Playlist_FlowPanel.Size = new System.Drawing.Size(320, 472);
+            this.Playlist_FlowPanel.Size = new System.Drawing.Size(320, 466);
             this.Playlist_FlowPanel.TabIndex = 10;
             this.Playlist_FlowPanel.Visible = false;
             // 
@@ -427,14 +427,14 @@
             this.TrackBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.TrackBar.ForeColor = System.Drawing.Color.White;
             this.TrackBar.LargeChange = ((uint)(5u));
-            this.TrackBar.Location = new System.Drawing.Point(0, 491);
+            this.TrackBar.Location = new System.Drawing.Point(0, 485);
             this.TrackBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TrackBar.Name = "TrackBar";
             this.TrackBar.ScaleDivisions = 10;
             this.TrackBar.ScaleSubDivisions = 5;
             this.TrackBar.ShowDivisionsText = true;
             this.TrackBar.ShowSmallScale = false;
-            this.TrackBar.Size = new System.Drawing.Size(1000, 42);
+            this.TrackBar.Size = new System.Drawing.Size(1009, 42);
             this.TrackBar.SmallChange = ((uint)(1u));
             this.TrackBar.TabIndex = 8;
             this.TrackBar.Text = "colorSlider1";
@@ -462,7 +462,7 @@
             this.Player_wmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Player_wmp.Name = "Player_wmp";
             this.Player_wmp.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Player_wmp.OcxState")));
-            this.Player_wmp.Size = new System.Drawing.Size(668, 356);
+            this.Player_wmp.Size = new System.Drawing.Size(677, 350);
             this.Player_wmp.TabIndex = 9;
             this.Player_wmp.Visible = false;
             this.Player_wmp.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.Player_wmp_PlayStateChange);

@@ -69,7 +69,7 @@ namespace Wave2.Forms
 
             if (od.ShowDialog() == DialogResult.OK)
             {
-                List.AddFiles(od.FileNames);
+               List.AddFiles(od.FileNames);
                 UpdateDataGrid();
                 DoClearPlaylist = false;
             }

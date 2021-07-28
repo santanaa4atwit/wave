@@ -120,7 +120,7 @@ namespace Wave2.Classes
                 }
             }
         }
-
+        
         public static void AddFolder(string folderPath)
         {
             DirectoryInfo dir = new DirectoryInfo(folderPath);
