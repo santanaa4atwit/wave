@@ -95,10 +95,10 @@ namespace Wave2.Classes
         {
             NewPlaylist();
             CurrentPlaylist.AddRange(PlaylistText);
-            foreach (var item in CurrentPlaylist.GetAllMembers())
-            {
-                System.Windows.Forms.MessageBox.Show(item);
-            }
+   //         foreach (var item in CurrentPlaylist.GetAllMembers())
+   //         {
+    //            System.Windows.Forms.MessageBox.Show(item);
+     //       }
             CurrentPlaylist = new SongList();
 
         }

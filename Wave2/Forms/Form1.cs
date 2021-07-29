@@ -842,5 +842,60 @@ namespace Wave2.Forms
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foCUS.Focus();
+            Form2 pf = new Form2();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          //  if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+          //  else Playlist_FlowPanel.Visible = false;
+
+            foCUS.Focus();
+            PlaylistForm pf = new PlaylistForm();
+
+
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
     }
 }
