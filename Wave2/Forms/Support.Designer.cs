@@ -147,12 +147,12 @@
             // 
             // TitleBar_panel
             // 
-            this.TitleBar_panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TitleBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.TitleBar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TitleBar_panel.Controls.Add(this.foCUS);
             this.TitleBar_panel.Controls.Add(this.EliteMediaPlayer_label);
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
+            this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
             this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TitleBar_panel.Name = "TitleBar_panel";
