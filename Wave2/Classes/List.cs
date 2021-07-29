@@ -7,6 +7,8 @@ using Wave2.DataStructure;
 using System.Data.SQLite;
 using System.IO;
 
+
+
 namespace Wave2.Classes
 {
     class List
@@ -89,6 +91,18 @@ namespace Wave2.Classes
             }
         }
 
+        public static void LoadLibraryPlaylist(string[] PlaylistText)
+        {
+            NewPlaylist();
+            CurrentPlaylist.AddRange(PlaylistText);
+            foreach (var item in CurrentPlaylist.GetAllMembers())
+            {
+                System.Windows.Forms.MessageBox.Show(item);
+            }
+            CurrentPlaylist = new SongList();
+
+        }
+
         public static void RemoveItems(string[] items)
         {
             for (int i = 0; i < items.Length; i++)
@@ -102,15 +116,31 @@ namespace Wave2.Classes
             foreach (string file in addresses)
             {
                 CurrentPlaylist.Add(file);
+            }
+        }
+
+        public static void AddToLibrary(string[] addresses)
+        {
+            foreach (string file in addresses)
+            {
 
                 TagLib.File tagFile = TagLib.File.Create(file);
                 string title = tagFile.Tag.Title;
+                string[] artist = tagFile.Tag.Performers;
+                string album = tagFile.Tag.Album;
+                string[] albumartists = tagFile.Tag.AlbumArtists;
+                string[] genre = tagFile.Tag.Genres;
+                uint track = tagFile.Tag.Track;
+                uint disc = tagFile.Tag.Disc;
+                uint year = tagFile.Tag.Year;
+
+
 
                 using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
                 {
                     using (SQLiteCommand cmd = new SQLiteCommand())
                     {
-                        string strSql = $"INSERT INTO[Track] (TrackId, TrackTitle) VALUES(3, '{title}')";
+                        string strSql = $"INSERT INTO[Track] (FilePath, TrackTitle, Artists, AlbumTitle, AlbumArtists, Genres, TrackNumber, DiscNumber, Year) VALUES('{file}', '{title}', '{artist[0]}', '{album}', '{albumartists[0]}', '{genre[0]}', '{track}', '{disc}', '{year}')";
                         cmd.CommandText = strSql;
                         cmd.Connection = conn;
                         conn.Open();
@@ -120,7 +150,7 @@ namespace Wave2.Classes
                 }
             }
         }
-        
+
         public static void AddFolder(string folderPath)
         {
             DirectoryInfo dir = new DirectoryInfo(folderPath);
