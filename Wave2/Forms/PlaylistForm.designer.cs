@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.TitleBar_panel = new System.Windows.Forms.Panel();
-            this.foCUS = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
-            this.Cross_Button = new System.Windows.Forms.Button();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.SavePlaylist_btn = new System.Windows.Forms.Button();
             this.LoadPlaylist_btn = new System.Windows.Forms.Button();
@@ -46,34 +43,17 @@
             this.AudioNames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deletion_cms = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.delete_cmsBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.TitleBar_panel.SuspendLayout();
+            this.TitleBar_panel = new System.Windows.Forms.Panel();
+            this.foCUS = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Min_Button = new System.Windows.Forms.Button();
+            this.Max_Button = new System.Windows.Forms.Button();
+            this.Cross_Button = new System.Windows.Forms.Button();
             this.Menu_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Playlist_datagrid)).BeginInit();
             this.Deletion_cms.SuspendLayout();
+            this.TitleBar_panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TitleBar_panel
-            // 
-            this.TitleBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.TitleBar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TitleBar_panel.Controls.Add(this.foCUS);
-            this.TitleBar_panel.Controls.Add(this.EliteMediaPlayer_label);
-            this.TitleBar_panel.Controls.Add(this.Cross_Button);
-            this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
-            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TitleBar_panel.Name = "TitleBar_panel";
-            this.TitleBar_panel.Size = new System.Drawing.Size(1052, 51);
-            this.TitleBar_panel.TabIndex = 3;
-            this.TitleBar_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
-            // 
-            // foCUS
-            // 
-            this.foCUS.Location = new System.Drawing.Point(366, 9);
-            this.foCUS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.foCUS.Name = "foCUS";
-            this.foCUS.Size = new System.Drawing.Size(27, 31);
-            this.foCUS.TabIndex = 9;
             // 
             // EliteMediaPlayer_label
             // 
@@ -81,7 +61,7 @@
             this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
             this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
-            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(9, 6);
+            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(12, 8);
             this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
             this.EliteMediaPlayer_label.Size = new System.Drawing.Size(222, 34);
@@ -89,29 +69,12 @@
             this.EliteMediaPlayer_label.Text = "Playlist Menu";
             this.EliteMediaPlayer_label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
             // 
-            // Cross_Button
-            // 
-            this.Cross_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cross_Button.FlatAppearance.BorderSize = 0;
-            this.Cross_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Cross_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cross_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cross_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Cross_Button.Location = new System.Drawing.Point(981, 2);
-            this.Cross_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Cross_Button.Name = "Cross_Button";
-            this.Cross_Button.Size = new System.Drawing.Size(68, 46);
-            this.Cross_Button.TabIndex = 2;
-            this.Cross_Button.Text = "X";
-            this.Cross_Button.UseVisualStyleBackColor = true;
-            this.Cross_Button.Click += new System.EventHandler(this.Cross_Button_Click_1);
-            // 
             // Menu_panel
             // 
             this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(70)))));
+            this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Menu_panel.Controls.Add(this.SavePlaylist_btn);
             this.Menu_panel.Controls.Add(this.LoadPlaylist_btn);
@@ -181,7 +144,7 @@
             this.AddFiles_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddFiles_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.AddFiles_btn.BackColor = System.Drawing.Color.Black;
             this.AddFiles_btn.FlatAppearance.BorderSize = 0;
             this.AddFiles_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddFiles_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -202,7 +165,7 @@
             this.AddFolder_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddFolder_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.AddFolder_btn.BackColor = System.Drawing.Color.Black;
             this.AddFolder_btn.FlatAppearance.BorderSize = 0;
             this.AddFolder_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AddFolder_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
@@ -232,10 +195,10 @@
             this.Play_lebel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Play_lebel.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play_lebel.ForeColor = System.Drawing.Color.Green;
-            this.Play_lebel.Location = new System.Drawing.Point(684, 525);
+            this.Play_lebel.Location = new System.Drawing.Point(685, 495);
             this.Play_lebel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Play_lebel.Name = "Play_lebel";
-            this.Play_lebel.Size = new System.Drawing.Size(344, 75);
+            this.Play_lebel.Size = new System.Drawing.Size(366, 131);
             this.Play_lebel.TabIndex = 12;
             this.Play_lebel.Text = "Play";
             this.Play_lebel.UseVisualStyleBackColor = true;
@@ -255,14 +218,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Playlist_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Playlist_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Playlist_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Playlist_datagrid.ColumnHeadersHeight = 34;
             this.Playlist_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Playlist_datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -317,35 +280,125 @@
             this.delete_cmsBtn.Size = new System.Drawing.Size(148, 32);
             this.delete_cmsBtn.Text = "Remove";
             // 
+            // TitleBar_panel
+            // 
+            this.TitleBar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.TitleBar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TitleBar_panel.Controls.Add(this.foCUS);
+            this.TitleBar_panel.Controls.Add(this.EliteMediaPlayer_label);
+            this.TitleBar_panel.Controls.Add(this.label2);
+            this.TitleBar_panel.Controls.Add(this.Min_Button);
+            this.TitleBar_panel.Controls.Add(this.Max_Button);
+            this.TitleBar_panel.Controls.Add(this.Cross_Button);
+            this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
+            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TitleBar_panel.Name = "TitleBar_panel";
+            this.TitleBar_panel.Size = new System.Drawing.Size(1052, 48);
+            this.TitleBar_panel.TabIndex = 15;
+            // 
+            // foCUS
+            // 
+            this.foCUS.Location = new System.Drawing.Point(463, 10);
+            this.foCUS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.foCUS.Name = "foCUS";
+            this.foCUS.Size = new System.Drawing.Size(27, 31);
+            this.foCUS.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(73, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 33);
+            this.label2.TabIndex = 6;
+            // 
+            // Min_Button
+            // 
+            this.Min_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Min_Button.FlatAppearance.BorderSize = 0;
+            this.Min_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Min_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Min_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Min_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Min_Button.Location = new System.Drawing.Point(844, 2);
+            this.Min_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Min_Button.Name = "Min_Button";
+            this.Min_Button.Size = new System.Drawing.Size(68, 48);
+            this.Min_Button.TabIndex = 4;
+            this.Min_Button.TabStop = false;
+            this.Min_Button.Text = "_";
+            this.Min_Button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Min_Button.UseVisualStyleBackColor = true;
+            this.Min_Button.Click += new System.EventHandler(this.Min_Button_Click);
+            // 
+            // Max_Button
+            // 
+            this.Max_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Max_Button.FlatAppearance.BorderSize = 0;
+            this.Max_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Max_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Max_Button.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Max_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Max_Button.Location = new System.Drawing.Point(912, 2);
+            this.Max_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Max_Button.Name = "Max_Button";
+            this.Max_Button.Size = new System.Drawing.Size(68, 46);
+            this.Max_Button.TabIndex = 3;
+            this.Max_Button.TabStop = false;
+            this.Max_Button.Text = "1";
+            this.Max_Button.UseVisualStyleBackColor = true;
+            this.Max_Button.Click += new System.EventHandler(this.Max_Button_Click_1);
+            // 
+            // Cross_Button
+            // 
+            this.Cross_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cross_Button.FlatAppearance.BorderSize = 0;
+            this.Cross_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.Cross_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cross_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cross_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Cross_Button.Location = new System.Drawing.Point(982, 2);
+            this.Cross_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Cross_Button.Name = "Cross_Button";
+            this.Cross_Button.Size = new System.Drawing.Size(68, 46);
+            this.Cross_Button.TabIndex = 2;
+            this.Cross_Button.TabStop = false;
+            this.Cross_Button.Text = "X";
+            this.Cross_Button.UseVisualStyleBackColor = true;
+            this.Cross_Button.Click += new System.EventHandler(this.Cross_Button_Click);
+            // 
             // PlaylistForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1052, 614);
+            this.Controls.Add(this.TitleBar_panel);
             this.Controls.Add(this.Playlist_datagrid);
             this.Controls.Add(this.Play_lebel);
             this.Controls.Add(this.AddFolder_btn);
             this.Controls.Add(this.AddFiles_btn);
             this.Controls.Add(this.Menu_panel);
-            this.Controls.Add(this.TitleBar_panel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PlaylistForm";
             this.Text = "PlaylistForm";
-            this.TitleBar_panel.ResumeLayout(false);
-            this.TitleBar_panel.PerformLayout();
             this.Menu_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Playlist_datagrid)).EndInit();
             this.Deletion_cms.ResumeLayout(false);
+            this.TitleBar_panel.ResumeLayout(false);
+            this.TitleBar_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel TitleBar_panel;
-        private System.Windows.Forms.Panel foCUS;
         private System.Windows.Forms.Label EliteMediaPlayer_label;
-        private System.Windows.Forms.Button Cross_Button;
         private System.Windows.Forms.Panel Menu_panel;
         private System.Windows.Forms.Button SavePlaylist_btn;
         private System.Windows.Forms.Button LoadPlaylist_btn;
@@ -358,5 +411,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AudioNames;
         private System.Windows.Forms.ContextMenuStrip Deletion_cms;
         private System.Windows.Forms.ToolStripMenuItem delete_cmsBtn;
+        private System.Windows.Forms.Panel TitleBar_panel;
+        private System.Windows.Forms.Panel foCUS;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Min_Button;
+        private System.Windows.Forms.Button Max_Button;
+        private System.Windows.Forms.Button Cross_Button;
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using Wave2.Classes;
 
 namespace Wave2.Settings
 {
@@ -79,6 +79,21 @@ namespace Wave2.Settings
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Min_Button_Click(object sender, EventArgs e)
+        {
+            WindowStates.Minimize(this);
+        }
+
+        private void Max_Button_Click_1(object sender, EventArgs e)
+        {
+            WindowStates.Maximize(this, Max_Button);
+        }
+
+        private void Cross_Button_Click_2(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

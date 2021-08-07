@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -89,6 +90,46 @@ namespace Wave2.Forms
                     List.NewPlaylist();
                 }
             }
+        }
+
+        private void Min_Button_Click(object sender, EventArgs e)
+        {
+            WindowStates.Minimize(this);
+           
+        }
+
+
+        private void Max_Button_Click_1(object sender, EventArgs e)
+        {
+            WindowStates.Maximize(this, Max_Button);
+        }
+
+        private void Cross_Button_Click_2(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Play_lebel_Click(object sender, EventArgs e)
+        {
+            if (DoClearPlaylist)
+            {
+                List.NewPlaylist();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OleDbConnection connection = new OleDbConnection();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

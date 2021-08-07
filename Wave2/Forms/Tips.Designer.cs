@@ -1,6 +1,6 @@
 ﻿namespace Wave2.Forms
 {
-    partial class Form2
+    partial class Tips
     {
         /// <summary>
         /// Required designer variable.
@@ -28,62 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tips));
             this.TitleBar_panel = new System.Windows.Forms.Panel();
             this.foCUS = new System.Windows.Forms.Panel();
+            this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Min_Button = new System.Windows.Forms.Button();
             this.Max_Button = new System.Windows.Forms.Button();
             this.Cross_Button = new System.Windows.Forms.Button();
-            this.Play_lebel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.TitleBar_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // EliteMediaPlayer_label
-            // 
-            this.EliteMediaPlayer_label.AutoSize = true;
-            this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
-            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
-            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(21, 5);
-            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
-            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(137, 34);
-            this.EliteMediaPlayer_label.TabIndex = 6;
-            this.EliteMediaPlayer_label.Text = "Library ";
-            this.EliteMediaPlayer_label.Click += new System.EventHandler(this.EliteMediaPlayer_label_Click);
-            this.EliteMediaPlayer_label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 95);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(744, 255);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 382);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 81);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Play Selected";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TitleBar_panel
             // 
@@ -99,8 +56,8 @@
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
             this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TitleBar_panel.Name = "TitleBar_panel";
-            this.TitleBar_panel.Size = new System.Drawing.Size(800, 48);
-            this.TitleBar_panel.TabIndex = 14;
+            this.TitleBar_panel.Size = new System.Drawing.Size(1021, 48);
+            this.TitleBar_panel.TabIndex = 16;
             // 
             // foCUS
             // 
@@ -109,6 +66,19 @@
             this.foCUS.Name = "foCUS";
             this.foCUS.Size = new System.Drawing.Size(27, 31);
             this.foCUS.TabIndex = 9;
+            // 
+            // EliteMediaPlayer_label
+            // 
+            this.EliteMediaPlayer_label.AutoSize = true;
+            this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
+            this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
+            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(12, 8);
+            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
+            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(327, 34);
+            this.EliteMediaPlayer_label.TabIndex = 6;
+            this.EliteMediaPlayer_label.Text = "Helpful Control Tips";
             // 
             // label2
             // 
@@ -130,7 +100,7 @@
             this.Min_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Min_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Min_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Min_Button.Location = new System.Drawing.Point(592, 2);
+            this.Min_Button.Location = new System.Drawing.Point(813, 2);
             this.Min_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Min_Button.Name = "Min_Button";
             this.Min_Button.Size = new System.Drawing.Size(68, 48);
@@ -149,7 +119,7 @@
             this.Max_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Max_Button.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.Max_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Max_Button.Location = new System.Drawing.Point(660, 2);
+            this.Max_Button.Location = new System.Drawing.Point(881, 2);
             this.Max_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Max_Button.Name = "Max_Button";
             this.Max_Button.Size = new System.Drawing.Size(68, 46);
@@ -157,7 +127,7 @@
             this.Max_Button.TabStop = false;
             this.Max_Button.Text = "1";
             this.Max_Button.UseVisualStyleBackColor = true;
-            this.Max_Button.Click += new System.EventHandler(this.Max_Button_Click_1);
+            this.Max_Button.Click += new System.EventHandler(this.Max_Button_Click);
             // 
             // Cross_Button
             // 
@@ -167,7 +137,7 @@
             this.Cross_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cross_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cross_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Cross_Button.Location = new System.Drawing.Point(730, 2);
+            this.Cross_Button.Location = new System.Drawing.Point(951, 2);
             this.Cross_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Cross_Button.Name = "Cross_Button";
             this.Cross_Button.Size = new System.Drawing.Size(68, 46);
@@ -175,89 +145,64 @@
             this.Cross_Button.TabStop = false;
             this.Cross_Button.Text = "X";
             this.Cross_Button.UseVisualStyleBackColor = true;
-            this.Cross_Button.Click += new System.EventHandler(this.Cross_Button_Click_2);
+            this.Cross_Button.Click += new System.EventHandler(this.Cross_Button_Click_1);
             // 
-            // Play_lebel
+            // panel2
             // 
-            this.Play_lebel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Location = new System.Drawing.Point(45, 78);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(811, 526);
+            this.panel2.TabIndex = 17;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Play_lebel.AutoSize = true;
-            this.Play_lebel.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Play_lebel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
-            this.Play_lebel.FlatAppearance.BorderSize = 0;
-            this.Play_lebel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
-            this.Play_lebel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
-            this.Play_lebel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Play_lebel.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play_lebel.ForeColor = System.Drawing.Color.Green;
-            this.Play_lebel.Location = new System.Drawing.Point(464, 357);
-            this.Play_lebel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Play_lebel.Name = "Play_lebel";
-            this.Play_lebel.Size = new System.Drawing.Size(335, 119);
-            this.Play_lebel.TabIndex = 15;
-            this.Play_lebel.Text = "Play";
-            this.Play_lebel.UseVisualStyleBackColor = true;
-            this.Play_lebel.Click += new System.EventHandler(this.Play_lebel_Click);
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox1.Location = new System.Drawing.Point(4, 5);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(833, 529);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(560, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 35);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = " ";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(572, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Search ";
-            // 
-            // Form2
+            // Tips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(800, 474);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Play_lebel);
+            this.ClientSize = new System.Drawing.Size(1021, 626);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.TitleBar_panel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "Tips";
+            this.Text = "Tips";
             this.TitleBar_panel.ResumeLayout(false);
             this.TitleBar_panel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label EliteMediaPlayer_label;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+
         private System.Windows.Forms.Panel TitleBar_panel;
         private System.Windows.Forms.Panel foCUS;
+        private System.Windows.Forms.Label EliteMediaPlayer_label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Min_Button;
         private System.Windows.Forms.Button Max_Button;
         private System.Windows.Forms.Button Cross_Button;
-        private System.Windows.Forms.Button Play_lebel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

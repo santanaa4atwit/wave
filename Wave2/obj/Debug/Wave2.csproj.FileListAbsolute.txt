@@ -54,3 +54,32 @@ C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\o
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.csproj.CopyComplete
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.exe
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.pdb
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\Wave2.exe.config
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\Wave2.exe
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\Wave2.pdb
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\ColorSlider.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\EntityFramework.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\Interop.WMPLib.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\System.Data.SQLite.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\taglib-sharp.dll
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\EntityFramework.xml
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\System.Data.SQLite.xml
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.csprojAssemblyReference.cache
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.AddMusic.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Form1.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Form2.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.PlaylistForm.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Support.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Properties.Resources.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Settings.FormSetting.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.csproj.GenerateResource.cache
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.csproj.CoreCompileInputs.cache
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.csproj.CopyComplete
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.exe
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.pdb
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Tips.resources

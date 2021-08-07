@@ -709,10 +709,10 @@ namespace Wave2.Forms
         {
             //childOpen(new FormSetting()); 
             foCUS.Focus();
-            Settings.FormSetting pf = new Settings.FormSetting();
+            FormSetting pf = new FormSetting();
 
 
-            if (pf.ShowDialog() == DialogResult.OK)
+          /*  if (pf.ShowDialog() == DialogResult.OK)
             {
                 if (List.IsPlaylistEmpty == false)
                 {
@@ -729,7 +729,7 @@ namespace Wave2.Forms
                     UpdateFlowPanel();
                     newBtn();
                 }
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -878,6 +878,40 @@ namespace Wave2.Forms
             PlaylistForm pf = new PlaylistForm();
 
 
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                if (List.IsPlaylistEmpty == false)
+                {
+                    UpdateFlowPanel();
+                    AutoPlayl.AutoPlay = true;
+                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    MakeSameSize(Playlist_FlowPanel);
+                    SELECTION();
+                }
+
+                else
+                {
+                    AutoPlayl.AutoPlay = false;
+                    UpdateFlowPanel();
+                    newBtn();
+                }
+            }
+        }
+
+        private void BelowPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelWave_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            foCUS.Focus();
+            Tips pf = new Tips();
             if (pf.ShowDialog() == DialogResult.OK)
             {
                 if (List.IsPlaylistEmpty == false)

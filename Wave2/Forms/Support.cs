@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wave2.Classes;
 
 namespace Wave2.Forms
 {
@@ -46,6 +47,26 @@ namespace Wave2.Forms
         }
 
         private void TitleBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Min_Button_Click(object sender, EventArgs e)
+        {
+            WindowStates.Minimize(this);
+        }
+
+        private void Max_Button_Click_1(object sender, EventArgs e)
+        {
+            WindowStates.Maximize(this, Max_Button);
+        }
+
+        private void Cross_Button_Click(object sender, EventArgs e)
+        {
+            Close(); 
+        }
+
+        private void foCUS_Paint(object sender, PaintEventArgs e)
         {
 
         }
