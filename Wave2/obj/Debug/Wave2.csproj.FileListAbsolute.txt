@@ -85,3 +85,4 @@ C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.pdb
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Tips.resources
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.Forms.Tips.resources
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.Forms.AddColumn.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.AddColumn.resources

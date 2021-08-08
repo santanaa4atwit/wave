@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
             this.Menu_panel = new System.Windows.Forms.Panel();
             this.SavePlaylist_btn = new System.Windows.Forms.Button();
@@ -71,8 +71,7 @@
             // 
             // Menu_panel
             // 
-            this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -87,6 +86,7 @@
             // 
             // SavePlaylist_btn
             // 
+            this.SavePlaylist_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SavePlaylist_btn.BackColor = System.Drawing.Color.Transparent;
             this.SavePlaylist_btn.FlatAppearance.BorderSize = 0;
             this.SavePlaylist_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -105,6 +105,7 @@
             // 
             // LoadPlaylist_btn
             // 
+            this.LoadPlaylist_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoadPlaylist_btn.BackColor = System.Drawing.Color.Transparent;
             this.LoadPlaylist_btn.FlatAppearance.BorderSize = 0;
             this.LoadPlaylist_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -141,9 +142,7 @@
             // 
             // AddFiles_btn
             // 
-            this.AddFiles_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddFiles_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddFiles_btn.BackColor = System.Drawing.Color.Black;
             this.AddFiles_btn.FlatAppearance.BorderSize = 0;
             this.AddFiles_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -162,9 +161,7 @@
             // 
             // AddFolder_btn
             // 
-            this.AddFolder_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddFolder_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AddFolder_btn.BackColor = System.Drawing.Color.Black;
             this.AddFolder_btn.FlatAppearance.BorderSize = 0;
             this.AddFolder_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -183,9 +180,7 @@
             // 
             // Play_lebel
             // 
-            this.Play_lebel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Play_lebel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Play_lebel.AutoSize = true;
             this.Play_lebel.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Play_lebel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(191)))), ((int)(((byte)(194)))));
@@ -195,10 +190,10 @@
             this.Play_lebel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Play_lebel.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play_lebel.ForeColor = System.Drawing.Color.Green;
-            this.Play_lebel.Location = new System.Drawing.Point(685, 495);
+            this.Play_lebel.Location = new System.Drawing.Point(708, 485);
             this.Play_lebel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Play_lebel.Name = "Play_lebel";
-            this.Play_lebel.Size = new System.Drawing.Size(366, 131);
+            this.Play_lebel.Size = new System.Drawing.Size(331, 115);
             this.Play_lebel.TabIndex = 12;
             this.Play_lebel.Text = "Play";
             this.Play_lebel.UseVisualStyleBackColor = true;
@@ -218,14 +213,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Playlist_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Playlist_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Playlist_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Playlist_datagrid.ColumnHeadersHeight = 34;
             this.Playlist_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Playlist_datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -54,6 +54,8 @@
             this.TrackBar = new ColorSlider.ColorSlider();
             this.Player_wmp = new AxWMPLib.AxWindowsMediaPlayer();
             this.menu = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -61,7 +63,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
             this.foCUS = new System.Windows.Forms.Panel();
             this.PinIcon_btn = new System.Windows.Forms.Button();
@@ -70,7 +71,6 @@
             this.Max_Button = new System.Windows.Forms.Button();
             this.Cross_Button = new System.Windows.Forms.Button();
             this.childpanel = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.MainControl_panel.SuspendLayout();
             this.BelowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Volume_trackBar)).BeginInit();
@@ -488,6 +488,32 @@
             this.menu.TabIndex = 4;
             this.menu.Paint += new System.Windows.Forms.PaintEventHandler(this.menu_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button6.Location = new System.Drawing.Point(21, 532);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(165, 50);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Tips";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(3, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 36);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Music";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.DimGray;
@@ -577,18 +603,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(3, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 36);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Music";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TitleBar_panel
             // 
@@ -724,20 +738,6 @@
             this.childpanel.Name = "childpanel";
             this.childpanel.Size = new System.Drawing.Size(1270, 650);
             this.childpanel.TabIndex = 2;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button6.Location = new System.Drawing.Point(21, 532);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(165, 50);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Tips";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 

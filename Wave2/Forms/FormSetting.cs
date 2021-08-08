@@ -86,10 +86,7 @@ namespace Wave2.Settings
             WindowStates.Minimize(this);
         }
 
-        private void Max_Button_Click_1(object sender, EventArgs e)
-        {
-            WindowStates.Maximize(this, Max_Button);
-        }
+        
 
         private void Cross_Button_Click_2(object sender, EventArgs e)
         {

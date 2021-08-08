@@ -34,7 +34,6 @@
             this.EliteMediaPlayer_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Min_Button = new System.Windows.Forms.Button();
-            this.Max_Button = new System.Windows.Forms.Button();
             this.Cross_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -50,7 +49,6 @@
             this.TitleBar_panel.Controls.Add(this.EliteMediaPlayer_label);
             this.TitleBar_panel.Controls.Add(this.label2);
             this.TitleBar_panel.Controls.Add(this.Min_Button);
-            this.TitleBar_panel.Controls.Add(this.Max_Button);
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
             this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
@@ -100,7 +98,7 @@
             this.Min_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Min_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Min_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Min_Button.Location = new System.Drawing.Point(813, 2);
+            this.Min_Button.Location = new System.Drawing.Point(888, -1);
             this.Min_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Min_Button.Name = "Min_Button";
             this.Min_Button.Size = new System.Drawing.Size(68, 48);
@@ -110,24 +108,6 @@
             this.Min_Button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Min_Button.UseVisualStyleBackColor = true;
             this.Min_Button.Click += new System.EventHandler(this.Min_Button_Click);
-            // 
-            // Max_Button
-            // 
-            this.Max_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Max_Button.FlatAppearance.BorderSize = 0;
-            this.Max_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.Max_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Max_Button.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.Max_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Max_Button.Location = new System.Drawing.Point(881, 2);
-            this.Max_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Max_Button.Name = "Max_Button";
-            this.Max_Button.Size = new System.Drawing.Size(68, 46);
-            this.Max_Button.TabIndex = 3;
-            this.Max_Button.TabStop = false;
-            this.Max_Button.Text = "1";
-            this.Max_Button.UseVisualStyleBackColor = true;
-            this.Max_Button.Click += new System.EventHandler(this.Max_Button_Click);
             // 
             // Cross_Button
             // 
@@ -200,7 +180,6 @@
         private System.Windows.Forms.Label EliteMediaPlayer_label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Min_Button;
-        private System.Windows.Forms.Button Max_Button;
         private System.Windows.Forms.Button Cross_Button;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBox1;

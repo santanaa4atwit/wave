@@ -163,7 +163,12 @@ namespace Wave2.Forms
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            SQLiteConnection connection = new SQLiteConnection();
+            if (e.KeyChar == (char)13)
+            {
+                DataView dv = dataTable.DefaultView;
+                dv.RowFilter = string.Format("TrackTitle like '%{0}%' or Artists like '%{0}%' or AlbumTitle like '%{0}%' or Genres like '%{0}%' or AlbumArtists like '%{0}%' or Year like '%{0}%'", textBox1.Text);
+                dataGridView1.DataSource = dv.ToTable();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -221,5 +226,10 @@ namespace Wave2.Forms
             }
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-  }
+}
