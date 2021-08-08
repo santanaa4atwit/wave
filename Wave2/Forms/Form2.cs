@@ -166,7 +166,26 @@ namespace Wave2.Forms
             if (e.KeyChar == (char)13)
             {
                 DataView dv = dataTable.DefaultView;
-                dv.RowFilter = string.Format("TrackTitle like '%{0}%' or Artists like '%{0}%' or AlbumTitle like '%{0}%' or Genres like '%{0}%' or AlbumArtists like '%{0}%' or Year like '%{0}%'", textBox1.Text);
+
+                String query = "";
+
+                for (int i = 0; i < dataGridView1.ColumnCount; i++)
+                {
+                    if (i == 5 || i == 6)
+                    {
+                        query += "";
+                    }
+                    else
+                    {
+                        query += String.Format("{0} like '%{1}%'", dataGridView1.Columns[i].HeaderText, textBox1.Text);
+                        if (i != dataGridView1.ColumnCount - 1)
+                        {
+                            query += " or ";
+                        }
+                    }
+                }
+
+                dv.RowFilter = query;
                 dataGridView1.DataSource = dv.ToTable();
             }
         }
@@ -230,6 +249,41 @@ namespace Wave2.Forms
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            int column = dataGridView1.CurrentCell.OwningColumn.Index;
+
+            if (column <= 8)
+            {
+                MessageBox.Show("Cannot delete standard categories.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show($"Delete '{dataGridView1.CurrentCell.OwningColumn.Name}'?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                {
+
+                    using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
+                    {
+                        using (SQLiteCommand cmd = new SQLiteCommand())
+                        {
+
+                            string strSql = $"ALTER TABLE Track DROP COLUMN '{dataGridView1.CurrentCell.OwningColumn.Name}'";
+                            cmd.CommandText = strSql;
+                            cmd.Connection = conn;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+                    }
+                    da.Update(dataTable);
+                    MessageBox.Show("Column Removed");
+                    DataBind();
+                }
+            }
         }
     }
 }

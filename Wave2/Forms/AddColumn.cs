@@ -125,7 +125,7 @@ namespace Wave2.Forms
 
             if (input == null)
             {
-                MessageBox.Show("Error", "Value cannot be empty.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Value cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             } else
             {
                 using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
