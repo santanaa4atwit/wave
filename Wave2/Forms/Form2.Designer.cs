@@ -40,6 +40,8 @@
             this.Play_lebel = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.TitleBar_panel.SuspendLayout();
             this.SuspendLayout();
@@ -50,10 +52,10 @@
             this.EliteMediaPlayer_label.BackColor = System.Drawing.Color.Transparent;
             this.EliteMediaPlayer_label.Font = new System.Drawing.Font("Lucida Bright", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EliteMediaPlayer_label.ForeColor = System.Drawing.Color.White;
-            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(21, 5);
-            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EliteMediaPlayer_label.Location = new System.Drawing.Point(28, 6);
+            this.EliteMediaPlayer_label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.EliteMediaPlayer_label.Name = "EliteMediaPlayer_label";
-            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(137, 34);
+            this.EliteMediaPlayer_label.Size = new System.Drawing.Size(179, 45);
             this.EliteMediaPlayer_label.TabIndex = 6;
             this.EliteMediaPlayer_label.Text = "Library ";
             this.EliteMediaPlayer_label.Click += new System.EventHandler(this.EliteMediaPlayer_label_Click);
@@ -65,25 +67,25 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 95);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 119);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(744, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(992, 319);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(28, 382);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(415, 478);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 81);
+            this.button1.Size = new System.Drawing.Size(171, 82);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Play Selected";
+            this.button1.Text = "Remove Selected";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // TitleBar_panel
             // 
@@ -97,17 +99,17 @@
             this.TitleBar_panel.Controls.Add(this.Cross_Button);
             this.TitleBar_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
-            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TitleBar_panel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.TitleBar_panel.Name = "TitleBar_panel";
-            this.TitleBar_panel.Size = new System.Drawing.Size(800, 48);
+            this.TitleBar_panel.Size = new System.Drawing.Size(1067, 60);
             this.TitleBar_panel.TabIndex = 14;
             // 
             // foCUS
             // 
-            this.foCUS.Location = new System.Drawing.Point(463, 10);
-            this.foCUS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.foCUS.Location = new System.Drawing.Point(617, 12);
+            this.foCUS.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.foCUS.Name = "foCUS";
-            this.foCUS.Size = new System.Drawing.Size(27, 31);
+            this.foCUS.Size = new System.Drawing.Size(36, 39);
             this.foCUS.TabIndex = 9;
             // 
             // label2
@@ -116,10 +118,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(73, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(97, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 33);
+            this.label2.Size = new System.Drawing.Size(0, 44);
             this.label2.TabIndex = 6;
             // 
             // Min_Button
@@ -130,10 +132,10 @@
             this.Min_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Min_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Min_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Min_Button.Location = new System.Drawing.Point(592, 2);
-            this.Min_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Min_Button.Location = new System.Drawing.Point(790, 2);
+            this.Min_Button.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Min_Button.Name = "Min_Button";
-            this.Min_Button.Size = new System.Drawing.Size(68, 48);
+            this.Min_Button.Size = new System.Drawing.Size(91, 60);
             this.Min_Button.TabIndex = 4;
             this.Min_Button.TabStop = false;
             this.Min_Button.Text = "_";
@@ -149,10 +151,10 @@
             this.Max_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Max_Button.Font = new System.Drawing.Font("Webdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.Max_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Max_Button.Location = new System.Drawing.Point(660, 2);
-            this.Max_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Max_Button.Location = new System.Drawing.Point(881, 2);
+            this.Max_Button.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Max_Button.Name = "Max_Button";
-            this.Max_Button.Size = new System.Drawing.Size(68, 46);
+            this.Max_Button.Size = new System.Drawing.Size(91, 58);
             this.Max_Button.TabIndex = 3;
             this.Max_Button.TabStop = false;
             this.Max_Button.Text = "1";
@@ -167,10 +169,10 @@
             this.Cross_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cross_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cross_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Cross_Button.Location = new System.Drawing.Point(730, 2);
-            this.Cross_Button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Cross_Button.Location = new System.Drawing.Point(974, 2);
+            this.Cross_Button.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Cross_Button.Name = "Cross_Button";
-            this.Cross_Button.Size = new System.Drawing.Size(68, 46);
+            this.Cross_Button.Size = new System.Drawing.Size(91, 58);
             this.Cross_Button.TabIndex = 2;
             this.Cross_Button.TabStop = false;
             this.Cross_Button.Text = "X";
@@ -191,10 +193,10 @@
             this.Play_lebel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Play_lebel.Font = new System.Drawing.Font("Lucida Bright", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Play_lebel.ForeColor = System.Drawing.Color.Green;
-            this.Play_lebel.Location = new System.Drawing.Point(464, 357);
-            this.Play_lebel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Play_lebel.Location = new System.Drawing.Point(619, 446);
+            this.Play_lebel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Play_lebel.Name = "Play_lebel";
-            this.Play_lebel.Size = new System.Drawing.Size(335, 119);
+            this.Play_lebel.Size = new System.Drawing.Size(447, 149);
             this.Play_lebel.TabIndex = 15;
             this.Play_lebel.Text = "Play";
             this.Play_lebel.UseVisualStyleBackColor = true;
@@ -203,9 +205,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(560, 57);
+            this.textBox1.Location = new System.Drawing.Point(747, 71);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 35);
+            this.textBox1.Size = new System.Drawing.Size(281, 44);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = " ";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -216,18 +219,41 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(572, 67);
+            this.label1.Location = new System.Drawing.Point(763, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(88, 24);
             this.label1.TabIndex = 17;
             this.label1.Text = "Search ";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(37, 478);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 82);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Add Category";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(225, 478);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 82);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Update Songs";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(800, 474);
+            this.ClientSize = new System.Drawing.Size(1067, 592);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Play_lebel);
@@ -235,6 +261,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -259,5 +286,7 @@
         private System.Windows.Forms.Button Play_lebel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

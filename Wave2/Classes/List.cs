@@ -99,7 +99,7 @@ namespace Wave2.Classes
    //         {
     //            System.Windows.Forms.MessageBox.Show(item);
      //       }
-            CurrentPlaylist = new SongList();
+     //       CurrentPlaylist = new SongList();
 
         }
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +15,12 @@ namespace Wave2.Forms
 {
     public partial class Form2 : Form
     {
+        SQLiteCommand command;
+        SQLiteDataAdapter da;
+        private BindingSource bindingSource = null;
+        private SQLiteCommandBuilder SQLiteCommandBuilder = null;
+        DataTable dataTable = new DataTable();
+
         public Form2()
         {
             InitializeComponent();
@@ -59,18 +64,22 @@ namespace Wave2.Forms
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
-            {
-                conn.Open();
-                SQLiteDataAdapter da = new SQLiteDataAdapter("SELECT TrackTitle, Artists, AlbumTitle, AlbumArtists, Genres, DiscNumber, TrackNumber, Year, FilePath FROM Track", conn);
-                DataSet ds = new System.Data.DataSet();
 
-                da.Fill(ds, "Track");
-                dataGridView1.DataSource = ds.Tables[0];
-            }
+            DataBind();
+
+            /*           using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
+                       {
+                           conn.Open();
+                           SQLiteDataAdapter da = new SQLiteDataAdapter("SELECT TrackTitle, Artists, AlbumTitle, AlbumArtists, Genres, DiscNumber, TrackNumber, Year, FilePath FROM Track", conn);
+                           DataSet ds = new System.Data.DataSet();
+
+                           da.Fill(ds, "Track");
+                           dataGridView1.DataSource = ds.Tables[0];
+                       }
+           */
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Int32 selectedRowCount =
         dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
@@ -78,24 +87,39 @@ namespace Wave2.Forms
             {
                 string[] sb = new String[1000];
 
-                for (int i = 0; i < selectedRowCount; i++)
-                {
-                    DataGridViewRow row = dataGridView1.SelectedRows[i];
-                    sb[i] = row.Cells["FilePath"].Value.ToString();
-                }
 
-                List.LoadLibraryPlaylist(sb);
-                if (DoClearPlaylist)
+                using (SQLiteConnection conn = new SQLiteConnection("data source = Wave.db"))
                 {
-                    List.NewPlaylist();
+                    using (SQLiteCommand cmd = new SQLiteCommand())
+                    {
+
+                        for (int i = 0; i < selectedRowCount; i++)
+                        {
+                            DataGridViewRow row = dataGridView1.SelectedRows[i];
+                            sb[i] = row.Cells["FilePath"].Value.ToString();
+
+                            string strSql = $"DELETE FROM Track WHERE FilePath = '{sb[i]}'";
+                            cmd.CommandText = strSql;
+                            cmd.Connection = conn;
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+                    }
                 }
             }
+
+            da.Update(dataTable);
+            MessageBox.Show("Songs Removed");
+            DataBind();
+
         }
 
         private void Min_Button_Click(object sender, EventArgs e)
         {
             WindowStates.Minimize(this);
-           
+
         }
 
 
@@ -111,9 +135,24 @@ namespace Wave2.Forms
 
         private void Play_lebel_Click(object sender, EventArgs e)
         {
-            if (DoClearPlaylist)
+            Int32 selectedRowCount =
+        dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
             {
-                List.NewPlaylist();
+                string[] sb = new String[1000];
+
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    DataGridViewRow row = dataGridView1.SelectedRows[i];
+                    sb[i] = row.Cells["FilePath"].Value.ToString();
+                }
+
+                List.AddFiles(sb);
+                if (DoClearPlaylist)
+                {
+                    List.NewPlaylist();
+                }
+
             }
         }
 
@@ -124,12 +163,63 @@ namespace Wave2.Forms
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            OleDbConnection connection = new OleDbConnection();
+            SQLiteConnection connection = new SQLiteConnection();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.EndEdit(); //very important step
+            da.Update(dataTable);
+            MessageBox.Show("Songs Updated");
+            DataBind();
+        }
+
+        private void DataBind()
+        {
+            dataGridView1.DataSource = null;
+            dataTable.Clear();
+
+            String connectionString = "data source = Wave.db";
+            String queryString1 = "SELECT * FROM Track";
+
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            connection.Open();
+            SQLiteCommand command = connection.CreateCommand();
+            command.CommandText = queryString1;
+            try
+            {
+                da = new SQLiteDataAdapter(queryString1, connection);
+                SQLiteCommandBuilder = new SQLiteCommandBuilder(da);
+                da.Fill(dataTable);
+                bindingSource = new BindingSource { DataSource = dataTable };
+                dataGridView1.DataSource = bindingSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            foCUS.Focus();
+            AddColumn column = new AddColumn();
+
+            if (column.ShowDialog() == DialogResult.OK)
+            {
+                da.Update(dataTable);
+                MessageBox.Show("Category Added");
+                DataBind();
+            }
+
+        }
     }
-}
+  }

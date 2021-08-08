@@ -90,6 +90,12 @@
     <Compile Include="Classes\WindowStates.cs" />
     <Compile Include="DataStructure\SongList.cs" />
     <Compile Include="DataStructure\SongNode.cs" />
+    <Compile Include="Forms\AddColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddColumn.Designer.cs">
+      <DependentUpon>AddColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddMusic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
       <DependentUpon>FormSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Settings.cs" />
+    <EmbeddedResource Include="Forms\AddColumn.resx">
+      <DependentUpon>AddColumn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMusic.resx">
       <DependentUpon>AddMusic.cs</DependentUpon>
     </EmbeddedResource>
