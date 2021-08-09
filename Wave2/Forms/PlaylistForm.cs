@@ -153,6 +153,7 @@ namespace Wave2.Forms
             for (int i = 0; i < Names.Length; i++)
             {
                 Playlist_datagrid.Rows.Add((i + 1), Names[i]);
+                
             }
 
            // Repeat_check.Checked = AutoPlayl.AllowRepitition;
@@ -259,7 +260,7 @@ namespace Wave2.Forms
 
         private void Playlist_datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+          
         }
 
         private void Min_Button_Click(object sender, EventArgs e)

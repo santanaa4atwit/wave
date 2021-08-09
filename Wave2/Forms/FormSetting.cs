@@ -14,8 +14,8 @@ namespace Wave2.Settings
 {
     public partial class FormSetting : Form
     {
-        private bool DefPinned { get { return PinnedOn_chk.Checked; } }
-        private bool DefFullscreen { get { return FullScrOn_chk.Checked; } }
+       // private bool DefPinned { get { return PinnedOn_chk.Checked; } }
+       // private bool DefFullscreen { get { return FullScrOn_chk.Checked; } }
 
         public FormSetting()
         {
@@ -48,7 +48,7 @@ namespace Wave2.Settings
 
         private void Cross_Button_Click(object sender, EventArgs e)
         {
-            Settings.Update(VolUp_cbox.Text, VolDown_cbox.Text, Forward_cbox.Text, Backward_cbox.Text, Volume_cbox.Text, DefFullscreen, DefPinned);
+            Settings.Update(VolUp_cbox.Text, VolDown_cbox.Text, Forward_cbox.Text, Backward_cbox.Text, Volume_cbox.Text);//, DefFullscreen, DefPinned
             this.Close();
         }
 
@@ -59,8 +59,8 @@ namespace Wave2.Settings
             Forward_cbox.Text = Settings.Forward_P.ToString();
             Backward_cbox.Text = Settings.Backward_P.ToString();
             Volume_cbox.Text = Settings.defVolume_P.ToString();
-            if (Settings.defPined_P) PinnedOn_chk.Checked = true;
-            if (Settings.defFullscreen_P) FullScrOn_chk.Checked = true;
+           // if (Settings.defPined_P) PinnedOn_chk.Checked = true;
+            //if (Settings.defFullscreen_P) FullScrOn_chk.Checked = true;
         }
 
         private void Default_btn_Click(object sender, EventArgs e)
@@ -91,6 +91,36 @@ namespace Wave2.Settings
         private void Cross_Button_Click_2(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Forward_cbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PinPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

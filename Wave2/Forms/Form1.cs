@@ -285,7 +285,7 @@ namespace Wave2.Forms
 
         private void Stop_btn_Click(object sender, EventArgs e)
         {
-            Player_wmp.Ctlcontrols.fastForward();
+            Player_wmp.Ctlcontrols.stop();
             TrackBar.Value = 0;
         }
 
@@ -347,14 +347,14 @@ namespace Wave2.Forms
             if (Size.Height == 428) this.Size = new Size(641, 102);
             else this.Size = new Size(641, 428);
         }
-        /* private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
          {
-         NewPlaylist_option_cms_Click
+             //NewPlaylist_option_cms_Click
              if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
              else Playlist_FlowPanel.Visible = false;
              childOpen(new Forms.PlaylistForm());
-         }*/
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+         }
+        private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
             else Playlist_FlowPanel.Visible = false;
@@ -428,8 +428,8 @@ namespace Wave2.Forms
             Player_wmp.Ctlenabled = false;
             Player_wmp.windowlessVideo = true;
             Player_wmp.stretchToFit = true;
-            Playlist_FlowPanel.AutoScroll = true;
-            Playlist_FlowPanel.WrapContents = false;
+           // Playlist_FlowPanel.AutoScroll = true;
+            //Playlist_FlowPanel.WrapContents = false;
             btnB = new Button();
         }
 
@@ -540,11 +540,11 @@ namespace Wave2.Forms
             foCUS.Focus();
         }
 
-        //private void PlaylistShow_Btn_Click_1(object sender, EventArgs e)
-        //{
-            //if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
-            //else Playlist_FlowPanel.Visible = false;
-        //}
+        private void PlaylistShow_Btn_Click_1(object sender, EventArgs e)
+        {
+            if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+            else Playlist_FlowPanel.Visible = false;
+        }
 
         static SizeF Maxsize = new SizeF();
 
@@ -579,12 +579,12 @@ namespace Wave2.Forms
             btnB = btn;
         }
 
-        private void HidePlaylist_OnClick(object sender, EventArgs e)
+      /*  private void HidePlaylist_OnClick(object sender, EventArgs e)
         {
             Playlist_FlowPanel.Visible = false;
             this.Focus();
         }
-
+        */
         private void UpdateTimer_Tick(object sender, EventArgs e)
         {
             TrackBar.Value = ConvertToSec(Player_wmp.Ctlcontrols.currentPositionString);
@@ -791,7 +791,7 @@ namespace Wave2.Forms
                 else
                 {
                     AutoPlayl.AutoPlay = false;
-                    UpdateFlowPanel();
+                   UpdateFlowPanel();
                     newBtn();
                 }
             }
@@ -817,7 +817,7 @@ namespace Wave2.Forms
                 else
                 {
                     AutoPlayl.AutoPlay = false;
-                    UpdateFlowPanel();
+                   UpdateFlowPanel();
                     newBtn();
                 }
             }
@@ -864,6 +864,7 @@ namespace Wave2.Forms
                 {
                     AutoPlayl.AutoPlay = false;
                     UpdateFlowPanel();
+                    
                     newBtn();
                 }
             }
@@ -871,8 +872,8 @@ namespace Wave2.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-          //  if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
-          //  else Playlist_FlowPanel.Visible = false;
+          if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+          else Playlist_FlowPanel.Visible = false;
 
             foCUS.Focus();
             PlaylistForm pf = new PlaylistForm();
@@ -930,6 +931,11 @@ namespace Wave2.Forms
                     newBtn();
                 }
             }
+        }
+
+        private void Playlist_FlowPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

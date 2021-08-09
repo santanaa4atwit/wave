@@ -118,25 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>   Play / Pause:
-  Space Key (or) Enter Key
+    <value> Shortcut for Play &amp; Pause:
 
-Go Forward:
-  Right Arrow 
-  
-  Go Backward:
-  Left Arrow 
-  
-  Fullscreen:
-  F (or) 5 (or) 6 (or) Ctrl+Enter Key
+  Click on either the Enter Key 
+  or Space Key 
 
- Volume Up: 
-   Up Arrow  
+Song and volume managment:
+
+  Use the arrows keys to control the song and the volume-
   
- Volume Down:
-  Down Arrow 
-  
-  
-  </value>
+  Up arrow- volume up
+
+  Down arrow- volume down
+
+  -&gt; song will go foward
+
+  &lt;- song will go back 
+
+   ⟲ will restart the song
+
+
+</value>
   </data>
 </root>

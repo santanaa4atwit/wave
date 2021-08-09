@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using Wave2.Forms;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Wave2.Classes;
@@ -24,6 +25,7 @@ namespace Wave2.Forms
         public Form2()
         {
             InitializeComponent();
+            DoClearPlaylist = false;
         }
         public bool DoClearPlaylist { get; set; }
 
@@ -46,6 +48,32 @@ namespace Wave2.Forms
                 ReleaseCapture();
                 SendMessage(this.Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
             }
+        }
+        public void UpdateDataGrid()
+        {
+            dataGridView1.Rows.Clear();
+
+            string[] Names = List.GetListOfNames;
+
+            for (int i = 0; i < Names.Length; i++)
+            {
+                dataGridView1.Rows.Add((i + 1), Names[i]);
+            }
+
+            // Repeat_check.Checked = AutoPlayl.AllowRepitition;
+            // Shuffle_check.Checked = AutoPlayl.AllowShuffle;
+        }
+        public void ClearDataGrid()
+        {
+            //dataGridView1.DataSource = true;
+            //dataGridView1.DataBind();
+            //dataGridView1.DataSource = null;
+           // dataTable.Clear();
+
+            //dataGridView1.Rows.Clear();
+
+            //Repeat_check.Checked = AutoPlayl.AllowRepitition;
+            //Shuffle_check.Checked = AutoPlayl.AllowShuffle;
         }
         private void EliteMediaPlayer_label_Click(object sender, EventArgs e)
         {
@@ -141,19 +169,35 @@ namespace Wave2.Forms
             {
                 string[] sb = new String[1000];
 
+                /*if (PlaylistForm.Playlist_datagrid > 0)
+                {
+
+                }*/
+
                 for (int i = 0; i < selectedRowCount; i++)
                 {
+                    /*if (selectedRowCount > 0)
+                    {
+                        DoClearPlaylist = true;
+
+                    }*/
                     DataGridViewRow row = dataGridView1.SelectedRows[i];
                     sb[i] = row.Cells["FilePath"].Value.ToString();
                 }
 
                 List.AddFiles(sb);
+                //dataGridView1.Rows.Clear();
+                //DoClearPlaylist = true;
+
                 if (DoClearPlaylist)
                 {
                     List.NewPlaylist();
                 }
+                //ClearDataGrid();
+                 //dataGridView1.Rows.Clear();
 
             }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -203,7 +247,7 @@ namespace Wave2.Forms
             DataBind();
         }
 
-        private void DataBind()
+        public void DataBind()
         {
             dataGridView1.DataSource = null;
             dataTable.Clear();
@@ -284,6 +328,25 @@ namespace Wave2.Forms
                     DataBind();
                 }
             }
+        }
+
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Deletion_cms.Show(MousePosition);
+            }
+        }
+        private void delete_cmsBtn_Click(object sender, EventArgs e)
+        {
+            List<string> parameters = new List<string>();
+
+            foreach (DataGridViewRow item in dataGridView1.SelectedRows)
+            {
+                parameters.Add(item.Cells["AudioNames"].Value.ToString());
+            }
+            List.RemoveItems(parameters.ToArray());
+            UpdateDataGrid();
         }
     }
 }

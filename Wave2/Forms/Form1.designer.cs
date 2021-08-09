@@ -49,8 +49,6 @@
             this.About_option_cms = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit_option_cms = new System.Windows.Forms.ToolStripMenuItem();
             this.Video_panel = new System.Windows.Forms.Panel();
-            this.Playlist_FlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.NewPlayLBtn = new System.Windows.Forms.Button();
             this.TrackBar = new ColorSlider.ColorSlider();
             this.Player_wmp = new AxWMPLib.AxWindowsMediaPlayer();
             this.menu = new System.Windows.Forms.Panel();
@@ -71,12 +69,12 @@
             this.Max_Button = new System.Windows.Forms.Button();
             this.Cross_Button = new System.Windows.Forms.Button();
             this.childpanel = new System.Windows.Forms.Panel();
+            this.Playlist_FlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.MainControl_panel.SuspendLayout();
             this.BelowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Volume_trackBar)).BeginInit();
             this.Main_cms.SuspendLayout();
             this.Video_panel.SuspendLayout();
-            this.Playlist_FlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player_wmp)).BeginInit();
             this.menu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -223,7 +221,6 @@
             this.BelowPanel.Name = "BelowPanel";
             this.BelowPanel.Size = new System.Drawing.Size(1014, 66);
             this.BelowPanel.TabIndex = 3;
-            this.BelowPanel.Click += new System.EventHandler(this.HidePlaylist_OnClick);
             this.BelowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BelowPanel_Paint);
             this.BelowPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowMainCms_MouseClick);
             // 
@@ -377,52 +374,18 @@
             this.Video_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Video_panel_Paint);
             this.Video_panel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowMainCms_MouseClick);
             // 
-            // Playlist_FlowPanel
-            // 
-            this.Playlist_FlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Playlist_FlowPanel.BackColor = System.Drawing.Color.Gray;
-            this.Playlist_FlowPanel.Controls.Add(this.NewPlayLBtn);
-            this.Playlist_FlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.Playlist_FlowPanel.Location = new System.Drawing.Point(19, 62);
-            this.Playlist_FlowPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Playlist_FlowPanel.Name = "Playlist_FlowPanel";
-            this.Playlist_FlowPanel.Size = new System.Drawing.Size(320, 386);
-            this.Playlist_FlowPanel.TabIndex = 10;
-            this.Playlist_FlowPanel.Visible = false;
-            // 
-            // NewPlayLBtn
-            // 
-            this.NewPlayLBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.NewPlayLBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(17)))), ((int)(((byte)(22)))));
-            this.NewPlayLBtn.FlatAppearance.BorderSize = 0;
-            this.NewPlayLBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(17)))), ((int)(((byte)(22)))));
-            this.NewPlayLBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.NewPlayLBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewPlayLBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPlayLBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NewPlayLBtn.Location = new System.Drawing.Point(0, 0);
-            this.NewPlayLBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.NewPlayLBtn.Name = "NewPlayLBtn";
-            this.NewPlayLBtn.Size = new System.Drawing.Size(352, 75);
-            this.NewPlayLBtn.TabIndex = 13;
-            this.NewPlayLBtn.TabStop = false;
-            this.NewPlayLBtn.Text = "New Playlist";
-            this.NewPlayLBtn.UseVisualStyleBackColor = false;
-            this.NewPlayLBtn.Click += new System.EventHandler(this.NewPlayLBtn_Click);
-            // 
             // TrackBar
             // 
             this.TrackBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TrackBar.BackColor = System.Drawing.Color.Black;
+            this.TrackBar.BackColor = System.Drawing.Color.Transparent;
             this.TrackBar.BarInnerColor = System.Drawing.Color.DimGray;
             this.TrackBar.BarPenColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(94)))), ((int)(((byte)(110)))));
             this.TrackBar.BarPenColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(60)))), ((int)(((byte)(74)))));
             this.TrackBar.BorderRoundRectSize = new System.Drawing.Size(8, 8);
-            this.TrackBar.ElapsedInnerColor = System.Drawing.Color.Silver;
+            this.TrackBar.ElapsedInnerColor = System.Drawing.Color.Maroon;
             this.TrackBar.ElapsedPenColorBottom = System.Drawing.Color.DimGray;
-            this.TrackBar.ElapsedPenColorTop = System.Drawing.Color.Silver;
+            this.TrackBar.ElapsedPenColorTop = System.Drawing.Color.Maroon;
             this.TrackBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.TrackBar.ForeColor = System.Drawing.Color.White;
             this.TrackBar.LargeChange = ((uint)(5u));
@@ -739,6 +702,20 @@
             this.childpanel.Size = new System.Drawing.Size(1270, 650);
             this.childpanel.TabIndex = 2;
             // 
+            // Playlist_FlowPanel
+            // 
+            this.Playlist_FlowPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Playlist_FlowPanel.BackColor = System.Drawing.Color.Gray;
+            this.Playlist_FlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Playlist_FlowPanel.Location = new System.Drawing.Point(20, 8);
+            this.Playlist_FlowPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Playlist_FlowPanel.Name = "Playlist_FlowPanel";
+            this.Playlist_FlowPanel.Size = new System.Drawing.Size(320, 466);
+            this.Playlist_FlowPanel.TabIndex = 11;
+            this.Playlist_FlowPanel.Visible = false;
+            this.Playlist_FlowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Playlist_FlowPanel_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -761,7 +738,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Volume_trackBar)).EndInit();
             this.Main_cms.ResumeLayout(false);
             this.Video_panel.ResumeLayout(false);
-            this.Playlist_FlowPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Player_wmp)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -794,9 +770,7 @@
         private System.Windows.Forms.ToolStripMenuItem About_option_cms;
         private System.Windows.Forms.ToolStripMenuItem Exit_option_cms;
         private AxWMPLib.AxWindowsMediaPlayer Player_wmp;
-        private System.Windows.Forms.FlowLayoutPanel Playlist_FlowPanel;
         private System.Windows.Forms.ToolStripMenuItem audioPlayerModeToolStripMenuItem;
-        private System.Windows.Forms.Button NewPlayLBtn;
         private System.Windows.Forms.Panel menu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
@@ -815,5 +789,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.FlowLayoutPanel Playlist_FlowPanel;
     }
 }
