@@ -49,7 +49,7 @@ namespace Wave2.Classes
 
                 for (int i = 0; i < Names.Length; i++)
                 {
-                    Names[i] += Names[i] + "\n";
+                    Names[i] += "\n";
                 }
                 return Names;
             }
@@ -87,7 +87,7 @@ namespace Wave2.Classes
             CurrentPlaylist.AddRange(PlaylistText);
             foreach (var item in CurrentPlaylist.GetAllMembers())
             {
-                System.Windows.Forms.MessageBox.Show(item);
+                //System.Windows.Forms.MessageBox.Show(item);
             }
         }
 

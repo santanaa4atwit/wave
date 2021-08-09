@@ -872,8 +872,8 @@ namespace Wave2.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-          if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
-          else Playlist_FlowPanel.Visible = false;
+ //         if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
+ //         else Playlist_FlowPanel.Visible = false;
 
             foCUS.Focus();
             PlaylistForm pf = new PlaylistForm();

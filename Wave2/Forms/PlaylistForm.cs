@@ -91,8 +91,8 @@ namespace Wave2.Forms
             SaveFileDialog saveDi = new SaveFileDialog
             {
                 FileName = "Playlist",
-                Filter = "Text files (*.txt)|*.txt",
-                DefaultExt = "Text files (*.txt)|*.txt"
+                Filter = "(*.m3u)|*.m3u",
+                DefaultExt = "(*.m3u)|*.m3u"
             };
 
             if (saveDi.ShowDialog() == DialogResult.OK)
@@ -113,11 +113,11 @@ namespace Wave2.Forms
         private void LoadPlaylist_btn_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog od = new OpenFileDialog();
-            od.Filter = "Text Files (*.txt)|*.txt";
+            od.Filter = "(*.m3u)|*.m3u";
             if (od.ShowDialog() == DialogResult.OK)
             {
                 List.LoadPlaylist(File.ReadAllLines(od.FileName));
-                foreach (string s in File.ReadAllLines(od.FileName)) MessageBox.Show(s);
+                foreach (string s in File.ReadAllLines(od.FileName));
                 DoClearPlaylist = false;
             }
             UpdateDataGrid();

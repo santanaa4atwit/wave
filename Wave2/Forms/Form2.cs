@@ -169,25 +169,16 @@ namespace Wave2.Forms
             {
                 string[] sb = new String[1000];
 
-                /*if (PlaylistForm.Playlist_datagrid > 0)
-                {
-
-                }*/
 
                 for (int i = 0; i < selectedRowCount; i++)
                 {
-                    /*if (selectedRowCount > 0)
-                    {
-                        DoClearPlaylist = true;
 
-                    }*/
                     DataGridViewRow row = dataGridView1.SelectedRows[i];
                     sb[i] = row.Cells["FilePath"].Value.ToString();
                 }
 
+                List.NewPlaylist();
                 List.AddFiles(sb);
-                //dataGridView1.Rows.Clear();
-                //DoClearPlaylist = true;
 
                 if (DoClearPlaylist)
                 {
