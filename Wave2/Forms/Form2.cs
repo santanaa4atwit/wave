@@ -339,5 +339,21 @@ namespace Wave2.Forms
             List.RemoveItems(parameters.ToArray());
             UpdateDataGrid();
         }
+        
+
+        private void TitleBar_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
+
+        private void TitleBar_panel_MouseMove_2(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
+            }
+        }
     }
 }

@@ -278,5 +278,15 @@ namespace Wave2.Forms
         {
             Close();
         }
+        
+
+        private void TitleBar_panel_MouseMove_2(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, new IntPtr(HT_CAPTION), IntPtr.Zero);
+            }
+        }
     }
 }

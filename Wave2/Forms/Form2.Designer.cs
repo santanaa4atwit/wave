@@ -114,6 +114,8 @@
             this.TitleBar_panel.Name = "TitleBar_panel";
             this.TitleBar_panel.Size = new System.Drawing.Size(1100, 48);
             this.TitleBar_panel.TabIndex = 14;
+            this.TitleBar_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.TitleBar_panel_Paint);
+            this.TitleBar_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseMove_2);
             // 
             // foCUS
             // 
