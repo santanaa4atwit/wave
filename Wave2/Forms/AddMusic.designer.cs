@@ -103,6 +103,7 @@
             this.AddFolder_btn.TabIndex = 10;
             this.AddFolder_btn.Text = "Add Folder";
             this.AddFolder_btn.UseVisualStyleBackColor = false;
+            this.AddFolder_btn.Click += new System.EventHandler(this.AddFolder_btn_Click_1);
             // 
             // button2
             // 
@@ -227,7 +228,7 @@
             this.Controls.Add(this.AddFiles_btn);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddMusic";
             this.Text = "AboutForm";
             this.TitleBar_panel.ResumeLayout(false);

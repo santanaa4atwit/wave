@@ -110,5 +110,17 @@ namespace Wave2.Forms
         {
 
         }
+
+        private void AddFolder_btn_Click_1(object sender, EventArgs e)
+        {
+            {
+                FolderBrowserDialog fb = new FolderBrowserDialog();
+                if (fb.ShowDialog() == DialogResult.OK)
+                {
+                    List.AddFolderToLibrary(fb.SelectedPath);
+                    DoClearPlaylist = false;
+                }
+            }
+        }
     }
 }
