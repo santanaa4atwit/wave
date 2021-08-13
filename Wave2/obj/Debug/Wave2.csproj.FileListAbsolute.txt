@@ -72,7 +72,6 @@ C:\Users\santanaa4\Documents\GitHub\wave\Wave2\bin\Debug\System.Data.SQLite.xml
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.csprojAssemblyReference.cache
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.AddMusic.resources
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Form1.resources
-C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Form2.resources
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.PlaylistForm.resources
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Support.resources
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Properties.Resources.resources
@@ -86,3 +85,4 @@ C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Tips.resour
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.Forms.Tips.resources
 C:\Users\calsm\Documents\4 - Senior Semester II\Senior Project\Wave\wave\Wave2\obj\Debug\Wave2.Forms.AddColumn.resources
 C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.AddColumn.resources
+C:\Users\santanaa4\Documents\GitHub\wave\Wave2\obj\Debug\Wave2.Forms.Library.resources

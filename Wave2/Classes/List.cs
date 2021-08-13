@@ -13,15 +13,15 @@ namespace Wave2.Classes
 {
     class List
     {
-        #region Fields
+       
 
         private static string[] wmpSupportedFormats = { ".wav", ".aac", ".wma", ".wmv", ".avi", ".mpg", ".mpeg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mp4", ".mov", ".3g2", ".3gp2", ".3gp", ".3gpp", ".m4a", ".cda", ".aif", ".aifc", ".aiff", ".mid", ".midi", ".rmi", ".mkv", ".WAV", ".AAC", ".WMA", ".WMV", ".AVI", ".MPG", ".MPEG", ".M1V", ".MP2", ".MP3", ".MPA", ".MPE", ".M3U", ".MP4", ".MOV", ".3G2", ".3GP2", ".3GP", ".3GPP", ".M4A", ".CDA", ".AIF", ".AIFC", ".AIFF", ".MID", ".MIDI", ".RMI", ".MKV" };
         static SongList CurrentPlaylist = new SongList();
         public static bool IsPlaylistEmpty { get { return CurrentPlaylist.IsEmpty(); } }
 
-        #endregion
+ 
 
-        #region Properties
+       
 
         public static string GetFirstTrack
         {
@@ -69,7 +69,7 @@ namespace Wave2.Classes
             }
         }
 
-        #endregion
+       
 
         public static string SearchByName(string name)
         {
@@ -95,11 +95,7 @@ namespace Wave2.Classes
         {
             NewPlaylist();
             CurrentPlaylist.AddRange(PlaylistText);
-   //         foreach (var item in CurrentPlaylist.GetAllMembers())
-   //         {
-    //            System.Windows.Forms.MessageBox.Show(item);
-     //       }
-     //       CurrentPlaylist = new SongList();
+ 
 
         }
 

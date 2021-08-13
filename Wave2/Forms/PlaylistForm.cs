@@ -25,9 +25,7 @@ namespace Wave2.Forms
 
         public bool DoClearPlaylist { get; set; }
 
-        #region TitleBar
-
-        #region fields
+      
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -37,7 +35,7 @@ namespace Wave2.Forms
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        #endregion
+        
 
         private void TitleBar_panel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -53,9 +51,9 @@ namespace Wave2.Forms
             Close();
         }
 
-        #endregion
+      
 
-        #region Playlist Events
+        
 
         private void AddFiles_btn_Click_1(object sender, EventArgs e)
         {
@@ -123,9 +121,7 @@ namespace Wave2.Forms
             UpdateDataGrid();
         }
 
-        #endregion
-
-        #region Private Methods
+        
 
         private void StylizeDataGrid()
         {
@@ -156,22 +152,18 @@ namespace Wave2.Forms
                 
             }
 
-           // Repeat_check.Checked = AutoPlayl.AllowRepitition;
-           // Shuffle_check.Checked = AutoPlayl.AllowShuffle;
+          
         }
 
         public void ClearDataGrid()
         {
             Playlist_datagrid.Rows.Clear();
 
-            //Repeat_check.Checked = AutoPlayl.AllowRepitition;
-            //Shuffle_check.Checked = AutoPlayl.AllowShuffle;
+          
         }
 
 
-        #endregion
-
-        #region PlayLabel Events
+      
 
         private void Play_lebel_MouseMove(object sender, MouseEventArgs e)
         {
@@ -188,7 +180,7 @@ namespace Wave2.Forms
             Play_lebel.ForeColor = Color.Crimson;
         }
 
-        #endregion
+        
 
         private void PlaylistForm_Paint(object sender, PaintEventArgs e)
         {
@@ -197,8 +189,7 @@ namespace Wave2.Forms
 
         private void Play_lebel_Click_1(object sender, EventArgs e)
         {
-           // AutoPlayl.AllowRepitition = Repeat_check.Checked;
-           // AutoPlayl.AllowShuffle = Shuffle_check.Checked;
+         
             if (DoClearPlaylist)
             {
                 List.NewPlaylist();

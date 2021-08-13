@@ -211,7 +211,7 @@ namespace Wave2.Forms
             {
                 if (isReady)
                 {
-                    AutoPlayl.PlayNextTrack(Player_wmp);
+                    AutoPlayl.PlayNext(Player_wmp);
                     UpdateTimer.Start();
                     PlayPauseIcon(false);
                 }
@@ -299,7 +299,7 @@ namespace Wave2.Forms
 
         private void Next_btn_Click(object sender, EventArgs e)
         {
-            AutoPlayl.PlayNextTrack(Player_wmp);
+            AutoPlayl.PlayNext(Player_wmp);
 
             string currName = Path.GetFileName(AutoPlayl.CurrentTrack);
 
@@ -317,7 +317,7 @@ namespace Wave2.Forms
 
         private void Previous_btn_Click(object sender, EventArgs e)
         {
-            AutoPlayl.PlayPreviousTrack(Player_wmp);
+            AutoPlayl.PlayPrevious(Player_wmp);
 
             string currName = Path.GetFileName(AutoPlayl.CurrentTrack);
 
@@ -349,7 +349,7 @@ namespace Wave2.Forms
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
          {
-             //NewPlaylist_option_cms_Click
+             
              if (Playlist_FlowPanel.Visible == false) Playlist_FlowPanel.Visible = true;
              else Playlist_FlowPanel.Visible = false;
              childOpen(new Forms.PlaylistForm());
@@ -369,7 +369,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -718,7 +718,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -745,7 +745,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -783,7 +783,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -800,7 +800,7 @@ namespace Wave2.Forms
         private void radioButton4_CheckedChanged_1(object sender, EventArgs e)
         {
             foCUS.Focus();
-            Form2 pf = new Form2();
+            Library pf = new Library();
 
 
             if (pf.ShowDialog() == DialogResult.OK)
@@ -809,7 +809,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -846,7 +846,7 @@ namespace Wave2.Forms
         private void button4_Click(object sender, EventArgs e)
         {
             foCUS.Focus();
-            Form2 pf = new Form2();
+            Library pf = new Library();
 
 
             if (pf.ShowDialog() == DialogResult.OK)
@@ -855,7 +855,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -885,7 +885,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }
@@ -919,7 +919,7 @@ namespace Wave2.Forms
                 {
                     UpdateFlowPanel();
                     AutoPlayl.AutoPlay = true;
-                    AutoPlayl.AutoPlayStarts(Player_wmp);
+                    AutoPlayl.AutoPlayS(Player_wmp);
                     MakeSameSize(Playlist_FlowPanel);
                     SELECTION();
                 }

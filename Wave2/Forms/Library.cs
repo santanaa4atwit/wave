@@ -14,7 +14,7 @@ using Wave2.Classes;
 
 namespace Wave2.Forms
 {
-    public partial class Form2 : Form
+    public partial class Library : Form
     {
         SQLiteCommand command;
         SQLiteDataAdapter da;
@@ -22,7 +22,7 @@ namespace Wave2.Forms
         private SQLiteCommandBuilder SQLiteCommandBuilder = null;
         DataTable dataTable = new DataTable();
 
-        public Form2()
+        public Library()
         {
             InitializeComponent();
             DoClearPlaylist = false;

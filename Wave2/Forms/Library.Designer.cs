@@ -1,6 +1,6 @@
 ﻿namespace Wave2.Forms
 {
-    partial class Form2
+    partial class Library
     {
         /// <summary>
         /// Required designer variable.

@@ -19,18 +19,16 @@ namespace Wave2.Settings
 
         public static void DeafaultSettings()
         {
-            Update("5", "5", "5", "5", "100");//, false, false
+            Update("5", "5", "5", "5", "100");
         }
 
-        public static void Update(string _Vup, string _Vdown, string _forw, string _back, string _dVol) //, bool _dFullscr, bool _dPin
+        public static void Update(string _Vup, string _Vdown, string _forw, string _back, string _dVol) 
         {
             VolUp_P = int.Parse(_Vup);
             VolDown_P = int.Parse(_Vdown);
             Forward_P = int.Parse(_forw);
             Backward_P = int.Parse(_back);
             defVolume_P = int.Parse(_dVol);
-            //defPined_P = _dPin;
-            //defFullscreen_P = _dFullscr;
             Properties.Settings.Default.Save();
         }
 
